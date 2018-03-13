@@ -11,7 +11,7 @@ public class TestController {
 
 	 @RequestMapping(value="/", method = RequestMethod.GET)
 	    public ModelAndView showLoginPage(ModelMap model){
-	    	ModelAndView mav = new ModelAndView("dashboard");
+	    	ModelAndView mav = new ModelAndView("index");
 	    	
 	        return mav;
 	    }
