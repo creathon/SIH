@@ -65,14 +65,18 @@ public class Location implements Serializable {
     @Basic(optional = false)
     @Column(name = "quote")
     private String quote;
+    
     @Lob
     @Column(name = "img_description")
     private String imgDescription;
+    
     @Basic(optional = false)
     @Column(name = "agency_id")
     private int agencyId;
+    
     @ManyToMany(mappedBy = "locationCollection")
     private Collection<Agency> agencyCollection;
+    
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "location")
     private LocationPhotos locationPhotos;
     @JoinColumn(name = "id", referencedColumnName = "id", insertable = false, updatable = false)

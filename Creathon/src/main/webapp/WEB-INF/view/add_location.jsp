@@ -22,11 +22,11 @@
 						<h2>ADD LOCATION DETAILS</h2>
 					</div>
 					<div class="body">
-						<form id="form_validation" method="POST">
+						<form:form id="form_validation" method="POST" modelAttribute="location">
 							<div class="col-md-12">
 								<div class="form-group form-float">
 									<div class="form-line">
-										<input type="text" class="form-control" name="location_name" required>
+										<form:input type="text" class="form-control" path="" name="location_name" required/>
 										<label class="form-label">Location Name</label>
 									</div>
 								</div>
@@ -34,7 +34,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
                                     <div class="form-line">
-                                        <textarea name="description" cols="30" rows="3" class="form-control no-resize" required></textarea>
+                                        <form:textarea path="" name="description" cols="30" rows="3" class="form-control no-resize" required></form:textarea>
                                         <label class="form-label">Location Description</label>
                                     </div>
                                 </div>
@@ -42,21 +42,21 @@
 							
 							 <div class="col-sm-6">
 							 <label class="form-label">Select Location Type</label>
-                                    <select class="form-control show-tick">
+                                    <form:select path="" class="form-control show-tick">
                                         <option value="">-- Select location Type --</option>
                                         <option value="10">10</option>
                                         <option value="20">20</option>
                                         <option value="30">30</option>
                                         <option value="40">40</option>
                                         <option value="50">50</option>
-                                    </select>
+                                    </form:select>
                                 </div>
                                 
                                 
                                 <div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<input type="text" class="form-control" name="landmark" required>
+									<form:input type="text" path="" class="form-control" name="landmark" required/>
 									<label class="form-label">Landmark</label>
 								</div>
 							</div>
@@ -64,7 +64,7 @@
 							<div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<input type="text" class="form-control" name="street" required>
+									<form:input type="text" path="" class="form-control" name="street" required/>
 									<label class="form-label">Street</label>
 								</div>
 							</div>
@@ -72,7 +72,7 @@
 							<div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<input type="text" class="form-control" name="pincode" required>
+									<form:input type="text" path="" class="form-control" name="pincode" required/>
 									<label class="form-label">Pincode</label>
 								</div>
 							</div>
@@ -80,7 +80,7 @@
 							<div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<input type="text" class="form-control" name="building_no" required>
+									<form:input type="text" class="form-control" path="" name="building_no" required/>
 									<label class="form-label">Flat no / Building name</label>
 								</div>
 							</div>
@@ -88,7 +88,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<input type="text" class="form-control" name="quote" required>
+									<form:input type="text" class="form-control" path="" name="quote" required/>
 									<label class="form-label">Quote</label>
 								</div>
 							</div>
@@ -96,7 +96,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<input type="text" class="form-control" name="img_des" required>
+									<form:input type="text" class="form-control" path="" name="img_des" required/>
 									<label class="form-label">Image Description</label>
 								</div>
 							</div>
@@ -105,14 +105,14 @@
 							<div class="form-group form-float">
 							<label class="form-label">Location Images <small>( To choose more than one image press Ctrl and select. ) </small></label>
 								<div class="form-line">
-									<input type="file" class="form-control" name="location_img" multiple required>
+									<form:input type="file" class="form-control" path="" name="location_img" multiple required/>
 									
 								</div>
 							</div>
 							</div>
 							
 							<button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>
