@@ -26,7 +26,7 @@
 							<div class="col-md-12">
 								<div class="form-group form-float">
 									<div class="form-line">
-										<form:input type="text" class="form-control" path="" name="location_name" required/>
+										<form:input type="text" class="form-control" path="name" name="location_name" required/>
 										<label class="form-label">Location Name</label>
 									</div>
 								</div>
@@ -34,7 +34,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
                                     <div class="form-line">
-                                        <form:textarea path="" name="description" cols="30" rows="3" class="form-control no-resize" required></form:textarea>
+                                        <form:textarea path="description" name="description" cols="30" rows="3" class="form-control no-resize" required></form:textarea>
                                         <label class="form-label">Location Description</label>
                                     </div>
                                 </div>
@@ -42,7 +42,7 @@
 							
 							 <div class="col-sm-6">
 							 <label class="form-label">Select Location Type</label>
-                                    <form:select path="" class="form-control show-tick">
+                                    <form:select path="type" class="form-control show-tick">
                                         <option value="">-- Select location Type --</option>
                                         <option value="10">10</option>
                                         <option value="20">20</option>
@@ -88,7 +88,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" class="form-control" path="" name="quote" required/>
+									<form:input type="text" class="form-control" path="quote" name="quote" required/>
 									<label class="form-label">Quote</label>
 								</div>
 							</div>
@@ -96,7 +96,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" class="form-control" path="" name="img_des" required/>
+									<form:input type="text" class="form-control" path="imgDescription" name="img_des" required/>
 									<label class="form-label">Image Description</label>
 								</div>
 							</div>
