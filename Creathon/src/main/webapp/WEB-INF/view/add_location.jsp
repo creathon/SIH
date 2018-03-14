@@ -51,39 +51,7 @@
                                         <option value="50">50</option>
                                     </select>
                                 </div>
-                                 <div class="col-sm-6">
-							<label class="form-label">Select Country</label>
-								<select class="form-control show-tick">
-									<option value="">-- Please country --</option>
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="30">30</option>
-									<option value="40">40</option>
-									<option value="50">50</option>
-								</select>
-							</div>
-							<div class="col-sm-6">
-							<label class="form-label">Select State</label>
-								<select class="form-control show-tick">
-									<option value="">-- Please state --</option>
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="30">30</option>
-									<option value="40">40</option>
-									<option value="50">50</option>
-								</select>
-							</div>
-							<div class="col-sm-6">
-							<label class="form-label">Select City</label>
-								<select class="form-control show-tick">
-									<option value="">-- Please city --</option>
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="30">30</option>
-									<option value="40">40</option>
-									<option value="50">50</option>
-								</select>
-							</div>
+                                
                                 
                                 <div class="col-md-6">
 							<div class="form-group form-float">
