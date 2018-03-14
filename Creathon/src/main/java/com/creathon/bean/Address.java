@@ -46,12 +46,15 @@ public class Address implements Serializable {
     @Basic(optional = false)
     @Column(name = "id")
     private Integer id;
+    
     @Basic(optional = false)
     @Column(name = "country_id")
     private int countryId;
+    
     @Basic(optional = false)
     @Column(name = "state_id")
     private int stateId;
+    
     @Basic(optional = false)
     @Column(name = "city_id")
     private int cityId;
