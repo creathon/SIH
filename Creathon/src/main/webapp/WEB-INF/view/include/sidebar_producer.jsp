@@ -36,10 +36,13 @@
 		<div class="menu">
 			<ul class="list">
 				<li class="header">MAIN NAVIGATION</li>
-				<li class="active"><a href="<%=request.getContextPath()%>/"> <i
+				<li class="active"><a href="<%=request.getContextPath()%>/producerDashboard"> <i
 						class="material-icons">home</i> <span>Home</span>
 				</a></li>
-				<li><a href="javascript:void(0);" class="menu-toggle"> <i
+				<li><a href="addTeamMember"> <i
+						class="material-icons">group_add </i> <span>Add Crew Member</span>
+				</a></li>
+				<!-- <li><a href="javascript:void(0);" class="menu-toggle"> <i
 						class="material-icons">queue_play_next</i> <span>Masters</span>
 				</a>
 					<ul class="ml-menu">
@@ -50,7 +53,7 @@
 						<li><a href="addLocationType">Add Location Type</a></li>
 						<li><a href="addProductionHouse">Add Production House</a></li>
 						<li><a href="addTeamMember">Add Team Member</a></li>
-					</ul></li>
+					</ul></li> -->
 					<!-- <li><a href="javascript:void(0);" class="menu-toggle"> <i
 						class="material-icons">schedule</i> <span>Batch</span>
 				</a>
@@ -260,7 +263,7 @@
 		<!-- Footer -->
 		<div class="legal">
 			<div class="copyright">
-				&copy; 2017 - 2018 <a href="javascript:void(0);">Praadis Training</a>.
+				&copy; 2017 - 2018 <a href="javascript:void(0);">SIH Producer</a>.
 			</div>
 			<div class="version">
 				<b>Version: </b> Beta

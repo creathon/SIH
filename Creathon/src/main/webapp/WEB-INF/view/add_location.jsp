@@ -26,7 +26,7 @@
 							<div class="col-md-12">
 								<div class="form-group form-float">
 									<div class="form-line">
-										<form:input type="text" class="form-control" path="name" name="location_name" required/>
+										<form:input type="text" class="form-control" path="name" name="location_name" required="true"/>
 										<label class="form-label">Location Name</label>
 									</div>
 								</div>
@@ -34,7 +34,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
                                     <div class="form-line">
-                                        <form:textarea path="description" name="description" cols="30" rows="3" class="form-control no-resize" required></form:textarea>
+                                        <form:textarea path="description" name="description" cols="30" rows="3" class="form-control no-resize" required="true"></form:textarea>
                                         <label class="form-label">Location Description</label>
                                     </div>
                                 </div>
@@ -56,7 +56,7 @@
                                 <div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" path="" class="form-control" name="landmark" required/>
+									<form:input type="text" path="addressId.landmark" class="form-control" name="landmark" required="true"/>
 									<label class="form-label">Landmark</label>
 								</div>
 							</div>
@@ -64,7 +64,7 @@
 							<div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" path="" class="form-control" name="street" required/>
+									<form:input type="text" path="addressId.street" class="form-control" name="street" required="true"/>
 									<label class="form-label">Street</label>
 								</div>
 							</div>
@@ -72,7 +72,7 @@
 							<div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" path="" class="form-control" name="pincode" required/>
+									<form:input type="text" path="addressId.pincode" class="form-control" name="pincode" required="true"/>
 									<label class="form-label">Pincode</label>
 								</div>
 							</div>
@@ -80,7 +80,7 @@
 							<div class="col-md-6">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" class="form-control" path="" name="building_no" required/>
+									<form:input type="text" class="form-control" path="addressId.buildingNo" name="building_no" required="true"/>
 									<label class="form-label">Flat no / Building name</label>
 								</div>
 							</div>
@@ -88,7 +88,7 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" class="form-control" path="quote" name="quote" required/>
+									<form:input type="text" class="form-control" path="quote" name="quote" required="true"/>
 									<label class="form-label">Quote</label>
 								</div>
 							</div>
@@ -96,16 +96,16 @@
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
-									<form:input type="text" class="form-control" path="imgDescription" name="img_des" required/>
+									<form:input type="text" class="form-control" path="imgDescription" name="img_des" required="true"/>
 									<label class="form-label">Image Description</label>
 								</div>
 							</div>
 							</div>
 							<div class="col-md-12">
 							<div class="form-group form-float">
-							<label class="form-label">Location Images <small>( To choose more than one image press Ctrl and select. ) </small></label>
+							<label class="form-label">Location Image</label>
 								<div class="form-line">
-									<form:input type="file" class="form-control" path="" name="location_img" multiple required/>
+									<form:input type="file" class="form-control" path="photo" name="location_img" multiple="true" required="true"/>
 									
 								</div>
 							</div>

@@ -83,6 +83,7 @@
 <!-- Jquery CountTo Plugin Js -->
 <script src="assets/plugins/jquery-countto/jquery.countTo.js"></script>
 
+
 <!-- Morris Plugin Js -->
 <!-- <script src="assets/plugins/raphael/raphael.min.js"></script>
 <script src="assets/plugins/morrisjs/morris.js"></script>
@@ -107,8 +108,12 @@
 
 <!-- Demo Js -->
 <script src="assets/js/demo.js"></script>
+<script src="assets/js/pages/ui/dialogs.js"></script>
+<script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
 </body>
 
-
+<script>
+callSuccessAlert("Success","Welcome");
+</script>
 
 </html>

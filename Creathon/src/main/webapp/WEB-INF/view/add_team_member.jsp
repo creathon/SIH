@@ -1,5 +1,5 @@
-<%@include file="include/header.jsp"%>
-<%@include file="include/sidebar.jsp"%>
+<%@include file="include/header_producer.jsp"%>
+<%@include file="include/sidebar_producer.jsp"%>
 <section class="content">
 	<div class="container-fluid">
 		<div class="block-header">
@@ -7,251 +7,357 @@
 				<ol class="breadcrumb">
 					<li><a href="/creathon">Home</a></li>
 					<li><a href="javascript:void(0);">Masters</a></li>
-					<li class="active">Add Team Member</li>
+					<li class="active">Add Crew Member</li>
 				</ol>
 			</div>
 			<!-- <h2>ADD AGENCY</h2> -->
 		</div>
-		<!-- Basic Validation -->
+		<!-- Multi Column -->
 		<div class="row clearfix">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				<div class="card">
 					<div class="header">
-						<h2>ADD TEAM MEMBER DETAILS</h2>
+						<h2>ADD CREW MEMBER DETAILS</h2>
 					</div>
 					<div class="body">
-						<form id="form_validation" method="POST">
+						<form:form action="saveTeamMember" method="POST" modelAttribute="teamMember">
 
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control"
-											name="team_member_name" required> <label
-											class="form-label">Team Member Name</label>
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control" path="name"
+												placeholder="Crew Name" required="true" />
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="email" class="form-control" name="email" required>
-										<label class="form-label">Email</label>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="fatherName" placeholder="Father's Name"
+												required="true" />
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="phone_no"
-											required> <label class="form-label">Phone No</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="mobile_no"
-											required> <label class="form-label">Mobile No</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-							
-                                    <div class="form-group">
-                                    <!-- <label class="form-label">Passport Validity</label>   -->                                        
-                                        <div class="form-line">
-                                            <input type="text" class="datepicker form-control" placeholder="Date of Birth...">
-                                        </div>
-                                    </div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="aadhar_no"
-											required> <label class="form-label">Aadhar No</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="birth_place"
-											required> <label class="form-label">Place of Birth</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="father_name"
-											required> <label class="form-label">Father's Name</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="father_name"
-											required> <label class="form-label">Father's Name</label>
-									</div>
-								</div>
-							</div>
-							<!-- <div class="col-sm-4">
-								<label class="form-label">Select Country</label> <select
-									class="form-control show-tick">
-									<option value="">-- Please country --</option>
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="30">30</option>
-									<option value="40">40</option>
-									<option value="50">50</option>
-								</select>
-							</div>
-							<div class="col-sm-4">
-								<label class="form-label">Select State</label> <select
-									class="form-control show-tick">
-									<option value="">-- Please state --</option>
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="30">30</option>
-									<option value="40">40</option>
-									<option value="50">50</option>
-								</select>
-							</div>
-							<div class="col-sm-4">
-								<label class="form-label">Select City</label> <select
-									class="form-control show-tick">
-									<option value="">-- Please city --</option>
-									<option value="10">10</option>
-									<option value="20">20</option>
-									<option value="30">30</option>
-									<option value="40">40</option>
-									<option value="50">50</option>
-								</select>
-							</div> -->
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="landmark"
-											required> <label class="form-label">Landmark</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="street" required>
-										<label class="form-label">Street</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="pincode"
-											required> <label class="form-label">Pincode</label>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="building_no"
-											required> <label class="form-label">Flat no /
-											Building name</label>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="email" class="form-control"
+												placeholder="Email" path="email" required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="producer_name"
-											required> <label class="form-label">Producer
-											Name</label>
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<input type="text" class="form-control" path="aadharNo"
+												placeholder="Aadhar No" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="datepicker form-control"
+												path="dateOfBirth" placeholder="Date of Birth..."
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<input type="text" class="form-control" path="placeOfBirth"
+												placeholder="Place of Birth" required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="nationality"
-											required> <label class="form-label">Nationality</label>
+							<div class="row clearfix">
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="designation.id" required="true">
+										<option value="">-- Select Designation --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick" path="film.id"
+										required="true">
+										<option value="">-- Select Film --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="periodOfVisit" placeholder="Period of Visit"
+												required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
 
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="passport_no"
-											required> <label class="form-label">Passport
-											No</label>
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="areaOfVisit" placeholder="Area of Visit"
+												required="true" />
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
 
-								<div class="form-group">
-									<!-- <label class="form-label">Passport Validity</label>   -->
-									<div class="form-line">
-										<input type="text" class="datepicker form-control"
-											placeholder="Passport Validity...">
+							</div>
+
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="passportNo" placeholder="Passport No" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="passportIssuingAuthority"
+												placeholder="Passport Issuing Authority" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="datepicker form-control"
+												path="passportValidity" placeholder="Passport validity..."
+												required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="visa_type"
-											required> <label class="form-label">Visa type</label>
+
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control" path="visaNo"
+												placeholder="Visa No" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control" path="visaType"
+												placeholder="Visa Type" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="visaIssuingAuthority"
+												placeholder="Visa Issuing Authority" required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="visa_no"
-											required> <label class="form-label">Visa No</label>
+
+							<div class="row clearfix">
+								<div class="col-sm-4">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="datepicker form-control"
+												path="visaValidity" placeholder="Visa Validity..."
+												required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="visa_validity"
-											required> <label class="form-label">Visa
-											Validity</label>
+
+							<!-- present address start -->
+
+							<h2 class="card-inside-title">Present Address</h2>
+							<div class="row clearfix">
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="presentAddress.country.id" required="true">
+										<option value="">-- Please Country --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="presentAddress.state.id" required="true">
+										<option value="">-- Please State --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="presentAddress.city.id" required="true">
+										<option value="">-- Please City --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="presentAddress.landmark" placeholder="landmark"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="presentAddress.street" placeholder="street"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="presentAddress.pincode" placeholder="pincode"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="presentAddress.buildingNo"
+												placeholder="building name / flat no" required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-6">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<input type="text" class="form-control" name="contact_person"
-											required> <label class="form-label">Contact
-											Person Name</label>
+							<!-- present address end -->
+
+
+							<!-- Permanent address start -->
+							<h2 class="card-inside-title">Permanent Address</h2>
+							<div class="row clearfix">
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="permanentAddress.country.id" required="true">
+										<option value="">-- Please Country --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="permanentAddress.state.id" required="true">
+										<option value="">-- Please State --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<form:select class="form-control show-tick"
+										path="permanentAddress.city.id" required="true">
+										<option value="">-- Please City --</option>
+										<option value="10">10</option>
+										<option value="20">20</option>
+										<option value="30">30</option>
+										<option value="40">40</option>
+										<option value="50">50</option>
+									</form:select>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="permanentAddress.landmark" placeholder="landmark"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="permanentAddress.street" placeholder="street"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="permanentAddress.pincode" placeholder="pincode"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="permanentAddress.buildingNo"
+												placeholder="building name / flat no" required="true" />
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
-								<div class="form-group form-float">
-									<div class="form-line">
-										<textarea name="producer_exp_profile" cols="30" rows="3"
-											class="form-control no-resize" required></textarea>
-										<label class="form-label">Producer Experience Profile</label>
-									</div>
+							<!-- Permanent address end -->
+
+							<div class="form-group">
+								<div class="">
+									<input type="submit" class="form-control btn btn-success"
+										placeholder="" value="SUBMIT" >
 								</div>
 							</div>
-							<button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- #END# Basic Validation -->
-
+		<!-- #END# Multi Column -->
 	</div>
 </section>
 <%@include file="include/footer.jsp"%>

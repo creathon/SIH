@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class TestController {
 
-	 @RequestMapping(value="/", method = RequestMethod.GET)
+	 @RequestMapping(value="/test", method = RequestMethod.GET)
 	    public ModelAndView showLoginPage(ModelMap model){
 	    	ModelAndView mav = new ModelAndView("index");
 	    	

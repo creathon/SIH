@@ -36,7 +36,7 @@
 		<div class="menu">
 			<ul class="list">
 				<li class="header">MAIN NAVIGATION</li>
-				<li class="active"><a href="<%=request.getContextPath()%>/"> <i
+				<li class="active"><a href="<%=request.getContextPath()%>/agencyDashboard"> <i
 						class="material-icons">home</i> <span>Home</span>
 				</a></li>
 				<li><a href="javascript:void(0);" class="menu-toggle"> <i
@@ -260,7 +260,7 @@
 		<!-- Footer -->
 		<div class="legal">
 			<div class="copyright">
-				&copy; 2017 - 2018 <a href="javascript:void(0);">Praadis Training</a>.
+				&copy; 2017 - 2018 <a href="javascript:void(0);">SIH Agency</a>.
 			</div>
 			<div class="version">
 				<b>Version: </b> Beta

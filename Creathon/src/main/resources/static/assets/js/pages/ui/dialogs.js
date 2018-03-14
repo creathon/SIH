@@ -145,3 +145,7 @@ function callAlert(message)
     	swal(message);
          
 }
+
+function callSuccessAlert(head,msg) {
+    swal(head, msg,"success");
+}
