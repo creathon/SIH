@@ -1,0 +1,13 @@
+/*package com.creathon.bean;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "films")
+public class Films {
+
+	
+	
+}
+*/

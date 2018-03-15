@@ -1,0 +1,118 @@
+package com.creathon.bean;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="address")
+public class Address {
+
+		@Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @Column(name = "id")
+	    private Integer id;
+		
+	    @JoinColumn(name = "country_id")
+	    @OneToOne
+	    private Countries countryId;
+	    
+	    @JoinColumn(name = "state_id")
+	    @OneToOne
+	    private States stateId;
+	    
+	    public Integer getId() {
+			return id;
+		}
+
+		public void setId(Integer id) {
+			this.id = id;
+		}
+
+		public Countries getCountryId() {
+			return countryId;
+		}
+
+		public void setCountryId(Countries countryId) {
+			this.countryId = countryId;
+		}
+
+		public States getStateId() {
+			return stateId;
+		}
+
+		public void setStateId(States stateId) {
+			this.stateId = stateId;
+		}
+
+		public Cities getCityId() {
+			return cityId;
+		}
+
+		public void setCityId(Cities cityId) {
+			this.cityId = cityId;
+		}
+
+		public String getLandmark() {
+			return landmark;
+		}
+
+		public void setLandmark(String landmark) {
+			this.landmark = landmark;
+		}
+
+		public String getStreet() {
+			return street;
+		}
+
+		public void setStreet(String street) {
+			this.street = street;
+		}
+
+		public Integer getPincode() {
+			return pincode;
+		}
+
+		public void setPincode(Integer pincode) {
+			this.pincode = pincode;
+		}
+
+		public String getBuildingNo() {
+			return buildingNo;
+		}
+
+		public void setBuildingNo(String buildingNo) {
+			this.buildingNo = buildingNo;
+		}
+
+		@JoinColumn(name = "city_id")
+	    @OneToOne
+	    private Cities cityId;
+	    
+	    @Column(name = "landmark")
+	    private String landmark;
+	    
+	    @Column(name = "street")
+	    private String street;
+	    
+	    @Column(name = "pincode")
+	    private Integer pincode;
+	    
+	    @Column(name = "building_no")
+	    private String buildingNo;
+
+		@Override
+		public String toString() {
+			return "Address [id=" + id + ", countryId=" + countryId + ", stateId=" + stateId + ", cityId=" + cityId
+					+ ", landmark=" + landmark + ", street=" + street + ", pincode=" + pincode + ", buildingNo="
+					+ buildingNo + "]";
+		}
+	
+	
+}

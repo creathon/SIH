@@ -1,0 +1,31 @@
+package com.creathon.daoImpl;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.creathon.bean.ProductionHouse;
+import com.creathon.dao.ProductionHouseDao;
+
+
+public class ProductionHouseDaoImpl implements ProductionHouseDao {
+
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Override
+	public ProductionHouse findByEmail(String email) {
+		ProductionHouse productionHouse= null;
+		try
+		{
+		productionHouse=(ProductionHouse) sessionFactory.getCurrentSession().createQuery("from ProductionHouse where email =: email").setString("email", email).uniqueResult();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
+		return productionHouse;
+		
+	}
+
+}

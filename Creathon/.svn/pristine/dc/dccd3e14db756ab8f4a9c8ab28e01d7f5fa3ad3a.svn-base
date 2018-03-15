@@ -1,0 +1,23 @@
+package com.creathon.serviceImpl;
+
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.creathon.bean.ProductionHouse;
+import com.creathon.dao.ProductionHouseDao;
+import com.creathon.service.ProductionHouseService;
+
+public class ProductionHouseServiceImpl implements ProductionHouseService {
+
+	@Autowired
+	private ProductionHouseDao productionHouseDao;
+	
+	
+	@Override
+	public ProductionHouse findByEmail(String email) {
+		return productionHouseDao.findByEmail(email);
+	}
+
+	
+	
+}

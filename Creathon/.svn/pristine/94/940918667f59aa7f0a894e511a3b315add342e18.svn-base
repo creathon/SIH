@@ -1,0 +1,36 @@
+package com.creathon.controller;
+
+
+
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.creathon.bean.User;
+
+
+@Controller
+public class LoginController {
+
+	
+
+	 @RequestMapping(value="/", method = RequestMethod.GET)
+	    public ModelAndView showLoginPage(ModelMap model){
+	    	ModelAndView mav = new ModelAndView("index");
+	    	mav.addObject("user", new User());
+	    	
+	        return mav;
+	    }
+	 
+	 @RequestMapping(value="validate_user", method = RequestMethod.GET)
+	    public ModelAndView validateUser(@ModelAttribute User user){
+	    	ModelAndView mav = new ModelAndView("index");
+	    	mav.addObject("user", new User());
+	        return mav;
+	    }
+	 
+}
