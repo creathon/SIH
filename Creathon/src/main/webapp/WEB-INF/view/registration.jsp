@@ -1,0 +1,283 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<html>
+<body>
+
+<script>
+
+function hideForeigner() {
+    var x = document.getElementById("foreigner");
+        x.style.display = "none";
+        
+        var x = document.getElementById("indian");
+        x.style.display = "block";
+}
+function showForeigner() {
+    var x = document.getElementById("foreigner");
+        x.style.display = "block";
+        var x = document.getElementById("indian");
+        x.style.display = "none";
+}
+
+
+
+
+
+
+
+
+
+
+function getState(countryId) {
+	$('#stateId').find('option').remove().end().append('<option value="">Select State</option>').val('');
+	
+	$.ajax({
+		type : "POST",
+		url : "ajax/getStates?id="+countryId,
+		
+
+	}).done(
+			function(stateList) {
+			
+				var opt = '<option value="">Select State</option>';
+				for (i in stateList) {
+					opt += '<option value="'+stateList[i].id+'">'
+							+ stateList[i].name + '</option>';
+				}
+				$('#stateId').html(opt);
+			});
+}
+
+
+function getCity(stateId) {
+	$('#cityId').find('option').remove().end().append('<option value="">Select City</option>').val('');
+	
+	$.ajax({
+		type : "POST",
+		url : "ajax/getCities?id="+stateId,
+		
+
+	}).done(
+			function(cityList) {
+			
+				var opt = '<option value="">Select City</option>';
+				for (i in cityList) {
+					opt += '<option value="'+cityList[i].id+'">'
+							+ cityList[i].name + '</option>';
+				}
+				$('#cityId').html(opt);
+			});
+}
+</script>
+
+
+
+
+			<form:form id="form_validation" method="POST" action="saveProductionHouse" modelAttribute="productionHouse">
+						
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="production_house_name" path="name" required="true"/> <label class="form-label">Production House
+											Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="email" class="form-control" name="email" path="emailId"
+											required="true"/> <label class="form-label">Email</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" path="phoneNo"
+											name="phone_no" required="true"/> <label
+											class="form-label">Phone No</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="mobile_no" path="mobileNo"
+											required="true"/> <label class="form-label">Mobile No</label>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-sm-4">
+							<label class="form-label">Select Country</label>
+								<form:select class="form-control show-tick" path="addressId.country.id" onchange="getState(this.value)">
+									<option value="">-- Country --</option>
+									<c:forEach items="${countryList}" var="cl">
+									<option value="${cl.id}">${cl.name}</option>
+										</c:forEach>
+								</form:select>
+							</div>
+							<div class="col-sm-4">
+							<label class="form-label">Select State</label>
+								<form:select class="form-control show-tick" onchange="getCity(this.value)" id="stateId" path="addressId.state.id">
+									<option value="">-- State --</option>
+									
+									<c:forEach items="${stateList}" var="sl">
+													<option value="${sl.id}">${sl.name}</option>
+										</c:forEach>
+								</form:select>
+							</div>
+							<div class="col-sm-4">
+							<label class="form-label">Select City</label>
+								<form:select class="form-control show-tick" id="cityId" path="addressId.city.id">
+									<c:forEach items="${stateList}" var="sl">
+													<option value="${sl.id}">${sl.name}</option>
+										</c:forEach>
+								</form:select>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="landmark" path="addressId.landmark" required="true"/> <label class="form-label">Landmark</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="street" path="addressId.street" required="true"/>
+										<label class="form-label">Street</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="pincode" path="addressId.pincode"
+											required="true"/> <label class="form-label">Pincode</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="building_no" path="addressId.buildingNo"
+											required="true"/> <label class="form-label">Flat no /
+											Building name</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="producer_name" path="producerName"
+											required="true"/> <label class="form-label">Producer Name</label>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<%-- <form:input type="text" class="form-control" name="nationality" path="nationality"
+											required="true"/> --%><br> <label class="form-label">Nationality</label><br>
+											  <input type="radio" onclick="hideForeigner()" name="nationality" value="Indian"/> Indian<br>
+  											  <input type="radio" name="nationality" onclick="showForeigner()" value="Foreigner"/>Foreigner<br>
+									</div>
+								</div>
+							</div>
+							<div id="foreigner">
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control"  name="passport_no" path="passportNo"
+											/> <label class="form-label">Passport No</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+							
+                                    <div class="form-group">
+                                    <label class="form-label">Passport Validity</label>                                          
+                                        <div class="form-line">
+                                            <form:input type="date" class="datepicker form-control" placeholder="Passport Validity..." path="validity"/>
+                                        </div>
+                                    </div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control"  name="visa_type" path="visaType"
+											/> <label class="form-label">Visa type</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control"   name="visa_no" path="visaNumber"
+											/> <label class="form-label">Visa No</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="date" class="form-control"   name="visa_validity" path="visaValidity"
+											/> <label class="form-label">Visa Validity</label>
+									</div>
+								</div>
+							</div>
+							
+							
+							</div>
+							<div id="indian">
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control"   name="adhaar" path="producerAadhar"
+											/> <label class="form-label">Producer Adhaar</label>
+									</div>
+								</div>
+							</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" name="contact_person" path="contactPerson"
+											required="true"/> <label class="form-label">Contact Person Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+							<div class="form-group form-float">
+                                    <div class="form-line">
+                                        <form:textarea name="producer_exp_profile" cols="30" rows="3" class="form-control no-resize" path="producerExperienceProfile" required="true"></form:textarea>
+                                        <label class="form-label">Producer Experience Profile</label>
+                                    </div>
+                                </div>
+							</div>
+							<!-- 
+							<div class="col-md-6">
+								<div class="form-group form-float">
+									<label class="form-label">Agency profile pic</label>
+									<div class="form-line">
+										<input type="file" class="form-control" name="agency_profile"
+											required="true">
+
+									</div>
+								</div>
+							</div> -->
+							<input type="submit">
+							<button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+						</form:form>
+<script src="assets/plugins/jquery/jquery.min.js"></script>
+</body></html>

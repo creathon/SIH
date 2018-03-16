@@ -1,0 +1,231 @@
+<%@include file="include/header_producer.jsp"%>
+<%@include file="include/sidebar_producer.jsp"%>
+<section class="content">
+	<div class="container-fluid">
+
+		<!-- Alert div start -->
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="body">
+					<c:if test="${not empty error}">
+						<div class="alert bg-pink alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							${error}
+						</div>
+					</c:if>
+					<c:if test="${not empty success}">
+						<div class="alert bg-green alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							${success}
+						</div>
+					</c:if>
+				</div>
+			</div>
+		</div>
+		<!-- Alert div end -->
+
+		<div class="block-header">
+			<div class="body">
+				<ol class="breadcrumb">
+					<li><a href="/creathon">Home</a></li>
+					<!-- <li><a href="javascript:void(0);">Masters</a></li> -->
+					<li class="active">Add Film</li>
+				</ol>
+			</div>
+			<!-- <h2>ADD AGENCY</h2> -->
+		</div>
+		<!-- Multi Column -->
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="card">
+					<div class="header">
+						<h2>ADD FILM / DOCUMENTARY / EVENT DETAILS</h2>
+					</div>
+					<div class="body">
+						<form:form action="saveFilm" method="POST" modelAttribute="film">
+
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<b>Film Name</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control" path="name"
+												placeholder="Film Name" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<b>Banner Name</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="nameOfBanner" placeholder="Banner Name"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<b>Language</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control" path="language"
+												placeholder="Film Language" required="true" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<b>Lead Actor</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control" path="mainActor"
+												placeholder="Lead Actor's Name" required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<b>Lead Actress</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="mainActress" placeholder="Lead Actress's Name"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<b>Total crew in film</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="noOfPeopleInFilm"
+												placeholder="Total crew in film (in nos).." required="true" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<b>Type of Film</b>
+									<form:select class="form-control show-tick" path="typeOfFilm"
+										required="true">
+										<option value="">-- Select Film Type --</option>
+										<option value="A">Adult(A)</option>
+										<option value="U/A">Universal Adult(U/A)</option>
+										<option value="U">Universal(U)</option>
+										<option value="V/A">Video Adult(V/A)</option>
+										<option value="V/UA">Video Universal Adult(V/UA)</option>
+										<option value="V/U">Video Universal(V/U)</option>
+									</form:select>
+								</div>
+								<div class="col-md-4">
+									<b>Nature of film (Genre)</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="text" class="form-control"
+												path="natureOfFilm" placeholder="Nature of film.."
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<b>Choose Director</b>
+									<form:select class="form-control show-tick" path="director.id"
+										required="true">
+
+										<form:option value="">-- Select Director --</form:option>
+										<c:forEach items="${directorList}" var="dirl" varStatus="loop">
+											<form:option value="${dirl.id}">${dirl.name}</form:option>
+										</c:forEach>
+
+									</form:select>
+								</div>
+							</div>
+
+							<div class="row clearfix">
+								<div class="col-sm-4">
+									<b>Choose Cinematographer</b>
+									<form:select class="form-control show-tick"
+										path="cinematographer.id" required="true">
+										<form:option value="">-- Select Cinematographer --</form:option>
+										<c:forEach items="${cinematographerList}" var="dirl" varStatus="loop">
+											<form:option value="${dirl.id}">${dirl.name}</form:option>
+										</c:forEach>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<b>Choose Local Line Producer</b>
+									<form:select class="form-control show-tick"
+										path="localLineProducer.id" required="true">
+										<form:option value="">-- Select Local Line Producer --</form:option>
+										<c:forEach items="${localLineProducerList}" var="dirl" varStatus="loop">
+											<form:option value="${dirl.id}">${dirl.name}</form:option>
+										</c:forEach>
+									</form:select>
+								</div>
+								<div class="col-sm-4">
+									<b>Choose Art Director</b>
+									<form:select class="form-control show-tick"
+										path="artDirector.id" required="true">
+										<form:option value="">-- Select Art Director --</form:option>
+										<c:forEach items="${artDirectorList}" var="dirl" varStatus="loop">
+											<form:option value="${dirl.id}">${dirl.name}</form:option>
+										</c:forEach>
+									</form:select>
+								</div>
+							</div>
+							<div class="row clearfix">
+								<div class="col-md-4">
+									<b>Certificate Imap</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="file" class="form-control"
+												placeholder="Certificate Imap" path="certificateImap"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<b>Certificate Wifpa</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="file" class="form-control"
+												placeholder="Certificate Wifpa" path="certificateWifpa"
+												required="true" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<b>Synopsis of film</b>
+									<div class="form-group">
+										<div class="form-line">
+											<form:input type="file" class="form-control"
+												path="synopsisOfFilm" placeholder="Synopsis of film"
+												required="true" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="">
+									<input type="submit" class="form-control btn btn-success"
+										placeholder="" value="SUBMIT">
+								</div>
+							</div>
+
+						</form:form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #END# Multi Column -->
+	</div>
+</section>
+<%@include file="include/footer.jsp"%>
