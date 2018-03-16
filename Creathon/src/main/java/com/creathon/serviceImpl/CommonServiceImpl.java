@@ -1,0 +1,31 @@
+package com.creathon.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.creathon.bean.Cities;
+import com.creathon.bean.States;
+import com.creathon.dao.CommonDao;
+import com.creathon.service.CommonService;
+
+@Service
+public class CommonServiceImpl implements CommonService {
+
+	@Autowired
+	private CommonDao commonDao;
+	
+	@Override
+	public List<States> findStateByCountryId(Integer countryId) {
+		// TODO Auto-generated method stub
+		return commonDao.findStateByCountryId(countryId);
+	}
+
+	@Override
+	public List<Cities> findCitiesByStateId(Integer stateId) {
+		// TODO Auto-generated method stub
+		return commonDao.findCitiesByStateId(stateId);
+	}
+
+}

@@ -1,5 +1,6 @@
 package com.creathon.bean;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +23,7 @@ public class ProductionHouse {
 	private String name;
 	
     @JoinColumn(name = "addressId")
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
 	private Address addressId;
 	
     @Column(name = "phoneNo")

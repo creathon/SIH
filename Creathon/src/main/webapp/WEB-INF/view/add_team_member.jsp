@@ -2,6 +2,34 @@
 <%@include file="include/sidebar_producer.jsp"%>
 <section class="content">
 	<div class="container-fluid">
+	
+	<!-- Alert div start -->
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="body">
+					<c:if test="${not empty error}">
+						<div class="alert bg-pink alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							${error}
+						</div>
+					</c:if>
+					<c:if test="${not empty success}">
+						<div class="alert bg-green alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							${success}
+						</div>
+					</c:if>
+				</div>
+			</div>
+		</div>
+		<!-- Alert div end -->
+	
 		<div class="block-header">
 			<div class="body">
 				<ol class="breadcrumb">
@@ -26,12 +54,12 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<div class="form-line">
-											<form:input type="text" class="form-control" path="name"
+											<form:input type="text" class="form-control" path="name" 
 												placeholder="Crew Name" required="true" />
 										</div>
 									</div>
 								</div>
-								<div class="col-md-4">
+								 <div class="col-md-4">
 									<div class="form-group">
 										<div class="form-line">
 											<form:input type="text" class="form-control"
@@ -54,7 +82,7 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<div class="form-line">
-											<input type="text" class="form-control" path="aadharNo"
+											<form:input type="text" class="form-control" path="aadharNo"
 												placeholder="Aadhar No" required="true" />
 										</div>
 									</div>
@@ -71,7 +99,7 @@
 								<div class="col-md-4">
 									<div class="form-group">
 										<div class="form-line">
-											<input type="text" class="form-control" path="placeOfBirth"
+											<form:input type="text" class="form-control" path="placeOfBirth"
 												placeholder="Place of Birth" required="true" />
 										</div>
 									</div>
@@ -83,7 +111,7 @@
 									<form:select class="form-control show-tick"
 										path="designation.id" required="true">
 										<option value="">-- Select Designation --</option>
-										<option value="10">10</option>
+										<option value="1">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -94,7 +122,7 @@
 									<form:select class="form-control show-tick" path="film.id"
 										required="true">
 										<option value="">-- Select Film --</option>
-										<option value="10">10</option>
+										<option value="1">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -202,7 +230,7 @@
 									<form:select class="form-control show-tick"
 										path="presentAddress.country.id" required="true">
 										<option value="">-- Please Country --</option>
-										<option value="10">10</option>
+										<option value="101">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -213,7 +241,7 @@
 									<form:select class="form-control show-tick"
 										path="presentAddress.state.id" required="true">
 										<option value="">-- Please State --</option>
-										<option value="10">10</option>
+										<option value="1">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -224,7 +252,7 @@
 									<form:select class="form-control show-tick"
 										path="presentAddress.city.id" required="true">
 										<option value="">-- Please City --</option>
-										<option value="10">10</option>
+										<option value="1">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -278,7 +306,7 @@
 									<form:select class="form-control show-tick"
 										path="permanentAddress.country.id" required="true">
 										<option value="">-- Please Country --</option>
-										<option value="10">10</option>
+										<option value="101">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -289,7 +317,7 @@
 									<form:select class="form-control show-tick"
 										path="permanentAddress.state.id" required="true">
 										<option value="">-- Please State --</option>
-										<option value="10">10</option>
+										<option value="1">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>
@@ -300,7 +328,7 @@
 									<form:select class="form-control show-tick"
 										path="permanentAddress.city.id" required="true">
 										<option value="">-- Please City --</option>
-										<option value="10">10</option>
+										<option value="1">10</option>
 										<option value="20">20</option>
 										<option value="30">30</option>
 										<option value="40">40</option>

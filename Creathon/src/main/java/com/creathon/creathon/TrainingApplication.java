@@ -10,14 +10,25 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
+import com.creathon.bean.TeamMember;
+import com.creathon.daoImpl.TeamMemberDaoImpl;
+import com.creathon.service.TeamMemberService;
+
 @SpringBootApplication
 @ComponentScan("com.creathon")
 @EntityScan( basePackages = {"com.creathon"} )
 public class TrainingApplication {
 
+	
+//	private static TeamMemberDaoImpl teamMemberService = new TeamMemberDaoImpl();
+	
 	public static void main(String[] args) {
 		SpringApplication.run(TrainingApplication.class, args);
 		System.out.println("HEllo World");
+		
+		
+		
+		
 	}
 	
 	@Autowired

@@ -69,7 +69,7 @@ function showCancelMessage() {
         showCancelButton: true,
         confirmButtonColor: "#DD6B55",
         confirmButtonText: "Yes, delete it!",
-        cancelButtonText: "No, cancel plx!",
+        cancelButtonText: "No, cancel plz!",
         closeOnConfirm: false,
         closeOnCancel: false
     }, function (isConfirm) {
@@ -148,4 +148,48 @@ function callAlert(message)
 
 function callSuccessAlert(head,msg) {
     swal(head, msg,"success");
+}
+function callImageAlert(title,msg) {
+	swal({
+        title: title,
+        text: msg,
+        imageUrl: "assets/images/thumbs-up.png"
+    });
+}
+function showDeleteMessage(id){
+	swal({
+        title: "Are you sure?",
+        text: "You will not be able to recover this imaginary file!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#DD6B55",
+        confirmButtonText: "Yes, delete it!!!",
+        cancelButtonText: "No, cancel plz!",
+        closeOnConfirm: false,
+        closeOnCancel: false
+    }, function (isConfirm) { 
+        if (isConfirm) {
+//        	alert(id);
+        		$.ajax({
+        	        url: "ajax/deleteTeamMember?id="+id,
+        	        type: 'GET',
+        	        cache: false,
+        	        data: {
+        	           userid: id
+        	        },
+        	        success: function(data){
+//        	        	alert(data);        
+        	        	if(data==1){
+        	                swal("Deleted!", "Your imaginary file has been deleted.", "success");
+        	        	}
+        	        	else{
+        	                swal("Cancelled", "Your imaginary file is safe :)", "error");
+        	        	}
+        	        }
+        	    });
+   
+        } else {
+            swal("Cancelled", "Your imaginary file is safe :)", "error");
+        }
+    });
 }

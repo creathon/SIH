@@ -1,5 +1,8 @@
 package com.creathon.bean;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,11 +26,10 @@ public class Location {
 	
 	
 	 @Column(name = "name")
-	 private Integer name;
+	 private String name;
 	 
-	 @JoinColumn(name = "address")
-	 @OneToOne
-	 private Address addressId;
+	 @Column(name = "address")
+	 private String address;
 	 
 	 @Column(name = "type")
 	 private String type;
@@ -36,17 +38,16 @@ public class Location {
 	 private String description;
 	 
 	 @Transient
+	 private List<MultipartFile> locationMultiplePhoto ;
+
+	 public void setAddress(String address) {
+		this.address = address;
+	}
+
+	@Transient
 	 private MultipartFile locationPhoto;
 	 
-	 public MultipartFile getLocationPhoto() {
-		return locationPhoto;
-	}
-
-	public void setLocationPhoto(MultipartFile locationPhoto) {
-		this.locationPhoto = locationPhoto;
-	}
-
-	@Column(name = "photo")
+	 @Column(name = "photo")
 	 private String photo;
 	 
 	 @Column(name = "quote")
@@ -63,6 +64,24 @@ public class Location {
 	@OneToOne
 	private Agency agencyId;
 
+	
+	
+	public MultipartFile getLocationPhoto() {
+		return locationPhoto;
+	}
+
+	public void setLocationPhoto(MultipartFile locationPhoto) {
+		this.locationPhoto = locationPhoto;
+	}
+
+	public List<MultipartFile> getLocationMultiplePhoto() {
+		return locationMultiplePhoto;
+	}
+
+	public void setLocationMultiplePhoto(List<MultipartFile> locationMultiplePhoto) {
+		this.locationMultiplePhoto = locationMultiplePhoto;
+	}
+
 	public Integer getId() {
 		return id;
 	}
@@ -71,20 +90,20 @@ public class Location {
 		this.id = id;
 	}
 
-	public Integer getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(Integer name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
-	public Address getAddressId() {
-		return addressId;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setAddressId(Address addressId) {
-		this.addressId = addressId;
+	public void setAddressId(String address) {
+		this.address = address;
 	}
 
 	public String getType() {
@@ -143,4 +162,12 @@ public class Location {
 		this.agencyId = agencyId;
 	}
 
+	@Override
+	public String toString() {
+		return "Location [id=" + id + ", name=" + name + ", type=" + type
+				+ ", description=" + description + ", locationPhoto=" + locationPhoto + ", photo=" + photo + ", quote="
+				+ quote + ", price=" + price + ", imgDescription=" + imgDescription + ", agencyId=" + agencyId + "]";
+	}
+
+	
 }

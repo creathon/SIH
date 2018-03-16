@@ -20,16 +20,16 @@ public class Address {
 	    private Integer id;
 		
 	    @JoinColumn(name = "country_id")
-	    @OneToOne
+	    @OneToOne(targetEntity = Countries.class)
 	    private Countries country;
 	    
 	    @JoinColumn(name = "state_id")
-	    @OneToOne
+	    @OneToOne(targetEntity = States.class)
 	    private States state;
 	    
 
 	    @JoinColumn(name = "city_id")
-	    @OneToOne
+	    @OneToOne(targetEntity = Cities.class)
 	    private Cities city;
 	    
 	    @Column(name = "landmark")

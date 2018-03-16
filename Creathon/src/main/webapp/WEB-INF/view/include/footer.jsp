@@ -8,7 +8,8 @@
 <!-- Select Plugin Js -->
 <script src="assets/plugins/bootstrap-select/js/bootstrap-select.js"></script>
 
-
+<!-- noUISlider Plugin Js -->
+<script src="assets/plugins/nouislider/nouislider.js"></script>
 
 <!-- Slimscroll Plugin Js -->
 <script src="assets/plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
@@ -37,8 +38,8 @@
 <!-- Sweet Alert Plugin Js -->
 <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
 
-<!-- noUISlider Plugin Js -->
-<script src="assets/plugins/nouislider/nouislider.js"></script>
+
+
 <!-- Waves Effect Plugin Js -->
 <script src="assets/plugins/node-waves/waves.js"></script>
 

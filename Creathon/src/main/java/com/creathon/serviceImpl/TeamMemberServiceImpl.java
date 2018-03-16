@@ -1,5 +1,7 @@
 package com.creathon.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +19,17 @@ public class TeamMemberServiceImpl implements TeamMemberService{
 	public Boolean saveAndUpdate(TeamMember teamMember) {
 		// TODO Auto-generated method stub
 		return teamMemberDao.saveAndUpdate(teamMember);
+	}
+
+	@Override
+	public Integer deleteTeamMember(Integer teamMemberId) {
+		return teamMemberDao.deleteTeamMember(teamMemberId);
+	}
+
+	@Override
+	public List<TeamMember> listOfTeamMemberByProdId(Integer productionHouseId) {
+		// TODO Auto-generated method stub
+		return teamMemberDao.listOfTeamMemberByProdId(productionHouseId);
 	}
 
 }

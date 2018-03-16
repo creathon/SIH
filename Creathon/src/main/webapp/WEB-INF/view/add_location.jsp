@@ -1,3 +1,4 @@
+<%@page import="java.io.File"%>
 <%@include file="include/header.jsp"%>
 <%@include file="include/sidebar.jsp"%>
 <section class="content">
@@ -22,7 +23,7 @@
 						<h2>ADD LOCATION DETAILS</h2>
 					</div>
 					<div class="body">
-						<form:form id="form_validation" method="POST" modelAttribute="location">
+						<form:form id="form_validation" action="saveLocation" method="POST" modelAttribute="location" enctype="multipart/form-data">
 							<div class="col-md-12">
 								<div class="form-group form-float">
 									<div class="form-line">
@@ -31,7 +32,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-md-12">
+					 <div class="col-md-12">
 							<div class="form-group form-float">
                                     <div class="form-line">
                                         <form:textarea path="description" name="description" cols="30" rows="3" class="form-control no-resize" required="true"></form:textarea>
@@ -40,11 +41,11 @@
                                 </div>
 							</div>
 							
-							 <div class="col-sm-6">
+							 <div class="col-sm-12">
 							 <label class="form-label">Select Location Type</label>
                                     <form:select path="type" class="form-control show-tick">
                                         <option value="">-- Select location Type --</option>
-                                        <option value="10">10</option>
+                                        <option value="10">Heritage</option>
                                         <option value="20">20</option>
                                         <option value="30">30</option>
                                         <option value="40">40</option>
@@ -52,39 +53,9 @@
                                     </form:select>
                                 </div>
                                 
-                                
-                                <div class="col-md-6">
-							<div class="form-group form-float">
-								<div class="form-line">
-									<form:input type="text" path="addressId.landmark" class="form-control" name="landmark" required="true"/>
-									<label class="form-label">Landmark</label>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-6">
-							<div class="form-group form-float">
-								<div class="form-line">
-									<form:input type="text" path="addressId.street" class="form-control" name="street" required="true"/>
-									<label class="form-label">Street</label>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-6">
-							<div class="form-group form-float">
-								<div class="form-line">
-									<form:input type="text" path="addressId.pincode" class="form-control" name="pincode" required="true"/>
-									<label class="form-label">Pincode</label>
-								</div>
-							</div>
-							</div>
-							<div class="col-md-6">
-							<div class="form-group form-float">
-								<div class="form-line">
-									<form:input type="text" class="form-control" path="addressId.buildingNo" name="building_no" required="true"/>
-									<label class="form-label">Flat no / Building name</label>
-								</div>
-							</div>
-							</div>
+                              
+							
+					
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
@@ -93,6 +64,26 @@
 								</div>
 							</div>
 							</div>
+							
+							
+							<div class="col-md-12">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<form:input type="text" class="form-control" path="address" name="address" required="true"/>
+									<label class="form-label">Address</label>
+								</div>
+							</div>
+							</div>
+							
+							<div class="col-md-12">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<form:input type="text" class="form-control" path="price" name="price" required="true"/>
+									<label class="form-label">Price</label>
+								</div>
+							</div>
+							</div>
+							
 							<div class="col-md-12">
 							<div class="form-group form-float">
 								<div class="form-line">
@@ -101,16 +92,27 @@
 								</div>
 							</div>
 							</div>
-							<div class="col-md-12">
+								<div class="col-md-12">
 							<div class="form-group form-float">
 							<label class="form-label">Location Image</label>
 								<div class="form-line">
-									<form:input type="file" class="form-control" path="photo" name="location_img" multiple="true" required="true"/>
+									<form:input type="file" class="form-control" path="locationPhoto" name="location_img" required="true"/>
 									
 								</div>
 							</div>
 							</div>
-							
+
+								<%-- <div class="col-md-12">
+							<div class="form-group form-float">
+							<label class="form-label">Multiple Location Image</label>
+								<div class="form-line">
+									<form:input type="file" class="form-control" path="locationMultiplePhoto" name="location_multiple_img" multiple="true" required="true"/>
+									
+								</div>
+								
+							</div>
+							</div> --%>
+						
 							<button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
 						</form:form>
 					</div>

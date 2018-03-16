@@ -42,6 +42,9 @@
 				<li><a href="addTeamMember"> <i
 						class="material-icons">group_add </i> <span>Add Crew Member</span>
 				</a></li>
+				<li><a href="teamMemberList"> <i
+						class="material-icons">create  </i> <span>Manage Crew Member</span>
+				</a></li>
 				<!-- <li><a href="javascript:void(0);" class="menu-toggle"> <i
 						class="material-icons">queue_play_next</i> <span>Masters</span>
 				</a>

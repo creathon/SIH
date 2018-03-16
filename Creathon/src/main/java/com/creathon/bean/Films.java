@@ -1,5 +1,7 @@
 package com.creathon.bean;
 
+import java.lang.annotation.Target;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.NotFound;
+/*@NotFound(action = NotFoundAction.IGNORE)*/
 
 @Entity
 @Table(name = "films")
@@ -24,7 +28,7 @@ public class Films {
 	    private String name;
 	    
 	    @JoinColumn(name = "director_id", referencedColumnName = "id")
-	    @OneToOne
+	    @OneToOne(targetEntity = TeamMember.class)
 	    private TeamMember director;
 	    
 	    @Column(name="certificate_imap")
@@ -55,15 +59,15 @@ public class Films {
 	    private String synopsisOfFilm;
 	    
 	    @JoinColumn(name = "cinematographer_id", referencedColumnName = "id")
-	    @OneToOne
+	    @OneToOne(targetEntity = TeamMember.class)
 	    private TeamMember cinematographer;
 	    
 	    @JoinColumn(name = "local_line_producer_id", referencedColumnName = "id")
-	    @OneToOne
+	    @OneToOne(targetEntity = TeamMember.class)
 	    private TeamMember localLineProducer;
 	    
 	    @JoinColumn(name = "art_director_id", referencedColumnName = "id")
-	    @OneToOne
+	    @OneToOne(targetEntity = TeamMember.class)
 	    private TeamMember artDirector;
 	    
 	    @Column(name="nature_of_film")
