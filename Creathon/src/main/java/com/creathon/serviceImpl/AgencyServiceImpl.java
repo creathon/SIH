@@ -1,5 +1,7 @@
 package com.creathon.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,6 +24,11 @@ public class AgencyServiceImpl implements AgencyService {
 	public Boolean saveandupdate(Agency agency) {
 		// TODO Auto-generated method stub
 		return agencyDao.saveandupdate(agency);
+	}
+
+	@Override
+	public List<Agency> findAll() {
+		return agencyDao.findAll();
 	}
 
 }

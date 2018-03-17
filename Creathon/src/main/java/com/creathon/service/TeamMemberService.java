@@ -16,5 +16,6 @@ public interface TeamMemberService {
 	public List<TeamMember> listOfCinematographer(Integer productionHouseId);
 	public List<TeamMember> listOfLocalLineProducer(Integer productionHouseId);
 	public List<TeamMember> listOfArtDirector(Integer productionHouseId);
+	public List<TeamMember> listOfCameraman(Integer productionHouseId);
 	
 }

@@ -17,11 +17,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.xml.bind.annotation.XmlRootElement;
+
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
- * @author rkahar
+ * @author VedvratLodhi
  */
 @Entity
 @Table(name = "script")
@@ -39,6 +42,23 @@ public class Script implements Serializable {
     
     @Column(name = "script")
     private String script;
+    
+    @Transient
+    private MultipartFile scriptFile;
+    
+    
+
+	public MultipartFile getScriptFile() {
+		return scriptFile;
+	}
+
+	public void setScriptFile(MultipartFile scriptFile) {
+		this.scriptFile = scriptFile;
+	}
+
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
 
 	public Integer getId() {
 		return id;

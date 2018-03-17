@@ -62,4 +62,9 @@ public class TeamMemberServiceImpl implements TeamMemberService{
 		return teamMemberDao.findTeamMemberById(teamMemberId);
 	}
 
+	@Override
+	public List<TeamMember> listOfCameraman(Integer productionHouseId) {
+		return teamMemberDao.listOfCameraman(productionHouseId);
+	}
+
 }

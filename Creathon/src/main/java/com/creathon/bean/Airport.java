@@ -22,6 +22,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 
+
 /**
  *
  * @author VedvratLodhi
@@ -37,13 +38,13 @@ public class Airport implements Serializable {
     private Integer id;
     
 
-    @OneToOne
-    @JoinColumn(name = "cameraman_id")
+    @OneToOne(targetEntity =TeamMember.class)
+    @JoinColumn(name = "cameraman_id",referencedColumnName ="id")
     private TeamMember cameramanId;
 
     
     @Column(name = "purpose_of_photography")
-    private String purposeOfLengthOfCamera;
+    private String purposeOfPhotography;
 
     @Column(name="focal_length_of_camera")
     private Float focalLengthOfCamera;
@@ -95,12 +96,14 @@ public class Airport implements Serializable {
 		this.cameramanId = cameramanId;
 	}
 
-	public String getPurposeOfLengthOfCamera() {
-		return purposeOfLengthOfCamera;
+	
+
+	public String getPurposeOfPhotography() {
+		return purposeOfPhotography;
 	}
 
-	public void setPurposeOfLengthOfCamera(String purposeOfLengthOfCamera) {
-		this.purposeOfLengthOfCamera = purposeOfLengthOfCamera;
+	public void setPurposeOfPhotography(String purposeOfPhotography) {
+		this.purposeOfPhotography = purposeOfPhotography;
 	}
 
 	public Float getFocalLengthOfCamera() {

@@ -34,7 +34,7 @@ public class ShootApplication implements Serializable {
 
     @ManyToOne(targetEntity =ProductionHouse.class)
     @JoinColumn( name = "production_house_id",referencedColumnName ="id")
-    private int productionHouseId;
+    private ProductionHouse productionHouse;
     
     @ManyToOne(targetEntity = Films.class)
     @JoinColumn(name = "film_id",referencedColumnName = "id")
@@ -47,16 +47,15 @@ public class ShootApplication implements Serializable {
     @Column(name = "no_people_in_cast")
     private String noPeopleInCast;
 
-    @Basic(optional = false)
     @Column(name = "date_of_shooting")
-    
     private String dateOfShooting;
+    
     @Column(name = "time_of_shooting")
     private String timeOfShooting;
    
     @OneToOne(targetEntity = Script.class)
     @JoinColumn(name = "script_id", referencedColumnName = "id")
-    private Script scriptId;
+    private Script script;
 
     @Column(name = "place_of_stay")
     private String placeOfStay;
@@ -100,12 +99,13 @@ public class ShootApplication implements Serializable {
 		this.id = id;
 	}
 
-	public int getProductionHouseId() {
-		return productionHouseId;
+	
+	public ProductionHouse getProductionHouse() {
+		return productionHouse;
 	}
 
-	public void setProductionHouseId(int productionHouseId) {
-		this.productionHouseId = productionHouseId;
+	public void setProductionHouse(ProductionHouse productionHouse) {
+		this.productionHouse = productionHouse;
 	}
 
 	public Films getFilm() {
@@ -148,12 +148,14 @@ public class ShootApplication implements Serializable {
 		this.timeOfShooting = timeOfShooting;
 	}
 
-	public Script getScriptId() {
-		return scriptId;
+	
+
+	public Script getScript() {
+		return script;
 	}
 
-	public void setScriptId(Script scriptId) {
-		this.scriptId = scriptId;
+	public void setScript(Script script) {
+		this.script = script;
 	}
 
 	public String getPlaceOfStay() {
@@ -242,6 +244,18 @@ public class ShootApplication implements Serializable {
 
 	public void setAerialPhotography(Airport aerialPhotography) {
 		this.aerialPhotography = aerialPhotography;
+	}
+
+	@Override
+	public String toString() {
+		return "ShootApplication [id=" + id + ", productionHouseId=" + productionHouse + ", film=" + film
+				+ ", location=" + location + ", noPeopleInCast=" + noPeopleInCast + ", dateOfShooting=" + dateOfShooting
+				+ ", timeOfShooting=" + timeOfShooting + ", scriptId=" + script + ", placeOfStay=" + placeOfStay
+				+ ", periodOfStay=" + periodOfStay + ", equipmentToBeUsed=" + equipmentToBeUsed + ", dateOfRelease="
+				+ dateOfRelease + ", filmingInAnyForestArea=" + filmingInAnyForestArea + ", detailOfForestArea="
+				+ detailOfForestArea + ", filmingInAnyDefenseArea=" + filmingInAnyDefenseArea + ", detailOfDefenseArea="
+				+ detailOfDefenseArea + ", status=" + status + ", viewStatus=" + viewStatus + ", aerialPhotography="
+				+ aerialPhotography + "]";
 	}
     
     

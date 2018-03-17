@@ -1,0 +1,81 @@
+<%@include file="include/header.jsp"%>
+
+<section class="content">
+	<div class="container-fluid">
+		<div class="block-header">
+			<div class="body">
+
+				<form:form action="saveshoot" modelAttribute="shootApplication" method="post" enctype="multipart/form-data">
+					<form:select path="film.id">
+						<option>---Select Film</option>
+						<c:forEach items="${filmList}" var="fl">
+							<option value="${fl.id}">${fl.name}</option>
+						</c:forEach>
+					</form:select>
+
+					<select onchange="return findLocation(this.value)">
+						<option>---Select Agency---</option>
+						<c:forEach items="${agencyList}" var="fl">
+							<option value="${fl.id}">${fl.name}</option>
+						</c:forEach>
+					</select>
+					
+					<form:select path="location.id" id="location">
+						<option>---Select Location---</option>
+					</form:select>
+					
+					
+					<form:input type="number" placeholder="NO of people in Cast" path="noPeopleInCast"/>
+					
+					<form:input type="text" class="datepicker form-control" placeholder="dateOfShooting" path="dateOfShooting"/>
+					
+					<form:input type="text" class="timepicker form-control" placeholder="timeOfShooting" path="timeOfShooting"/>
+					
+					<form:input type="file" path="script.scriptFile" />
+					
+				<form:input type="text"  placeholder="Place Of Stay" path="placeOfStay"/>
+				
+				<form:textarea path="equipmentToBeUsed"/>
+				<form:input  class="datepicker form-control" path="dateOfRelease" type="text"/>
+				
+
+				yes:<form:radiobutton style="opacity:1!important; position: inherit !important;" class="form-check-input"  value="0" path="filmingInAnyForestArea" onclick="showhide(this,'forest')"/>
+				No:<form:radiobutton style="opacity:1!important; position: inherit !important;" class="form-check-input"  value="1" path="filmingInAnyForestArea" onclick="showhide(this,'forest')"/>
+					<form:textarea path="detailOfForestArea" style="display:none;"/>
+					
+					yes:<form:radiobutton style="opacity:1!important; position: inherit !important;" class="form-check-input"  value="0" path="filmingInAnyDefenseArea" onclick="showhide(this,'defence')"/>
+				No:<form:radiobutton style="opacity:1!important; position: inherit !important;" class="form-check-input"  value="1" path="filmingInAnyDefenseArea" onclick="showhide(this,'defense')"/>
+					<form:textarea path="detailOfDefenseArea" style="display:none;"/>
+					
+					<form:input  type="text" placeholder="Place Of Stay" path="periodOfStay"/>
+					<input type="submit" />
+				</form:form>
+			</div>
+		</div>
+	</div>
+</section>
+
+<%@include file="include/sidebar.jsp"%>
+<%@include file="include/footer.jsp"%>
+
+<script>
+	function findLocation(agencyId) {
+alert(agencyId);
+		$('#location').html('');
+		$('#location').html('<option value="">Select Location</option>');
+		
+		$.ajax({
+			url : "ajax/getLocation?id=" + agencyId,
+			success : function(result) {
+				console.log(result);
+				for( i in result){
+					console.log(result[i])
+				$('#location').append('<option value='+result[i].id+'>'+result[i].name+'</option>');
+					$('#location').selectpicker("refresh");
+				}
+			}
+		});
+	}
+	
+// 	function showhide(obj,id)
+</script>

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.creathon.bean.Cities;
+import com.creathon.bean.Location;
 import com.creathon.bean.States;
 import com.creathon.service.CommonService;
+import com.creathon.service.LocationService;
 import com.creathon.service.TeamMemberService;
 
 @RestController
@@ -22,6 +24,9 @@ public class AjaxController {
 	
 	@Autowired
 	private TeamMemberService teamMemberService;
+	
+	@Autowired
+	private LocationService locationService;
 
 	@RequestMapping(value = "getStates")
 	@ResponseBody
@@ -37,6 +42,13 @@ public class AjaxController {
 	{
 		
 		return commonService.findCitiesByStateId(stateId);
+	}
+	
+	@RequestMapping(value = "getLocation")
+	@ResponseBody
+	public List<Location> getAllLocationByAgencyId(@RequestParam("id") Integer agencyId)
+	{
+		return locationService.findByAgencyId(agencyId);
 	}
 	
 	

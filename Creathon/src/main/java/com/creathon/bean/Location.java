@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.creathon.service.LocationPhotosService;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.Transient;
 
@@ -70,6 +71,7 @@ public class Location {
 	@OneToOne
 	private Agency agencyId;
 
+		@JsonIgnore
 	   @OneToMany(cascade = CascadeType.ALL, mappedBy = "location")
 	   private List<LocationPhotos> locationPhotos;
 	

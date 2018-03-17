@@ -1,5 +1,7 @@
 package com.creathon.daoImpl;
 
+import java.util.List;
+
 import javax.transaction.Transactional;
 
 import org.hibernate.SessionFactory;
@@ -39,6 +41,11 @@ public class AgencyDaoImpl implements AgencyDao {
 			e.printStackTrace();
 			return false;
 		}
+	}
+
+	@Override
+	public List<Agency> findAll() {
+		return sessionFactory.getCurrentSession().createQuery("from Agency").list();
 	}
 
 }

@@ -127,12 +127,17 @@ public class TeamMemberDaoImpl implements TeamMemberDao{
 		try{
 			listOfArtDirector = sessionFactory.getCurrentSession().createQuery("From TeamMember where production_house_id=" +productionHouseId+"and designation_id="+4).list();
 		
-		}catch(Exception e){
+			}catch(Exception e){
 			e.printStackTrace();
 			return null;
 		}
 		
 		return listOfArtDirector;
+	}
+
+	@Override
+	public List<TeamMember> listOfCameraman(Integer productionHouseId) {
+		return sessionFactory.getCurrentSession().createQuery("from TeamMember where production_house_id=:productionHouseId and designation_id="+6).setParameter("productionHouseId",productionHouseId).list();
 	}
 
 }
