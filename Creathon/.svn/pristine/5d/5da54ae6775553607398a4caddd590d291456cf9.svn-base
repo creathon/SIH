@@ -1,0 +1,6 @@
+package com.creathon.service;
+
+public interface LocationPermissionService {
+
+public Boolean save(com.creathon.bean.LocationPermission locationPermission);
+}

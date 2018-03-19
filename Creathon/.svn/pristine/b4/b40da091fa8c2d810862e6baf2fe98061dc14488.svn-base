@@ -1,0 +1,21 @@
+package com.creathon.util;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.creathon.bean.Agency;
+import com.creathon.bean.LocationAgency;
+
+public class Convertor {
+
+	public static List<LocationAgency> convertor(List<Agency> agencyList){
+		
+		List<LocationAgency> locationAgencyList = new ArrayList<LocationAgency>();
+		for(Agency agency : agencyList){
+			LocationAgency locationAgency=new LocationAgency();
+			locationAgency.setAgency(agency);
+			locationAgencyList.add(locationAgency);
+		}
+		return locationAgencyList;
+		
+	}
+}

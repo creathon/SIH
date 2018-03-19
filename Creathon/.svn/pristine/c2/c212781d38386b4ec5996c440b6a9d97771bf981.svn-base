@@ -1,0 +1,104 @@
+package com.creathon.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.creathon.bean.Location;
+import com.creathon.bean.LocationAgency;
+import com.creathon.bean.ProductionHouse;
+import com.creathon.bean.SessionBean;
+import com.creathon.bean.ShootApplication;
+import com.creathon.bean.TeamMember;
+import com.creathon.service.AgencyService;
+import com.creathon.service.FilmsService;
+import com.creathon.service.LocationService;
+import com.creathon.service.ShootApplicationService;
+import com.creathon.service.TeamMemberService;
+
+@Controller
+public class ShootApplicationController {
+
+	@Autowired
+	private FilmsService filmService;
+	
+	@Autowired
+	private LocationService locationService;
+	
+	@Autowired
+	private AgencyService agencyService;
+	
+	@Autowired
+	private TeamMemberService teamMemberService;
+	
+	@Autowired
+	private ShootApplicationService shootApplicationService;
+	
+	@RequestMapping(value="shootLocation", method = RequestMethod.GET)
+	public ModelAndView shootLocation(Model model,HttpSession session)
+	{
+		SessionBean sessionBean = (SessionBean) session.getAttribute("sessionBean");	
+		if(sessionBean !=null && sessionBean.getProductionHouse() !=null)
+		{
+		ProductionHouse productionHouse = sessionBean.getProductionHouse();
+		Integer productionHouseId = productionHouse.getId();
+		ModelAndView mav = new ModelAndView("apply_shoot");
+		mav.addObject("shootApplication",new ShootApplication());
+		mav.addObject("agencyList",agencyService.findAll());
+		List<TeamMember> listTeamMember =teamMemberService.listOfCameraman(productionHouseId);
+		System.out.println("teammember list"+listTeamMember);
+		mav.addObject("cameramanList",listTeamMember);
+		mav.addObject("filmList",filmService.findAllByProductionHouseId(productionHouseId));
+		return mav;
+		}else
+		{
+			
+		return new ModelAndView("redirect:/");
+		}
+	}
+	
+	@RequestMapping(value="saveshoot", method = RequestMethod.POST)
+	public ModelAndView saveShootLocation(@ModelAttribute("shootApplication") ShootApplication shootApplication,HttpSession session)
+	{
+		System.out.println(shootApplication); 
+		SessionBean sessionBean = (SessionBean) session.getAttribute("sessionBean");	
+		if(sessionBean !=null && sessionBean.getProductionHouse() !=null)
+		{
+			ProductionHouse productionHouse = sessionBean.getProductionHouse();
+			Integer productionHouseId = productionHouse.getId();
+			ModelAndView mav = new ModelAndView("apply_shoot");
+			mav.addObject("shootApplication",new ShootApplication());
+			mav.addObject("agencyList",agencyService.findAll());
+			List<TeamMember> listTeamMember =teamMemberService.listOfCameraman(productionHouseId);
+			System.out.println("teammember list"+listTeamMember);
+			mav.addObject("cameramanList",listTeamMember);
+			mav.addObject("filmList",filmService.findAllByProductionHouseId(productionHouseId));
+			
+			Boolean b=shootApplicationService.save(shootApplication);
+			if(b)
+			{
+				Location location = locationService.locationById(shootApplication.getLocation().getId());
+				List<LocationAgency> locationAgencyList = location.getLocationAgency();
+				
+				 
+			}else
+			{
+				
+			}
+		return mav;
+		}else
+		{
+		return new ModelAndView("redirect:/");
+		}
+
+	}
+}
+
