@@ -1,0 +1,212 @@
+<%@page import="java.io.File"%>
+<%@include file="include/header.jsp"%>
+<%@include file="include/sidebar.jsp"%>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+var count =1;
+	function addSeason(){		
+		
+		$.ajax({url: "addSeason/"+count, success: function(result){ 
+			console.log(result);
+			$('#wheather').append(result);
+			$('#wheather').selectpicker('refresh');
+	    }});
+		count++;
+	 	return false;
+	} 
+
+	
+			</script>
+
+<section   class="content">
+
+	<div class="container-fluid">
+		<div class="block-header">
+		<div class="body">
+					<c:if test="${not empty error}">
+						<div class="alert bg-pink alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							${error}
+						</div>
+					</c:if>
+					<c:if test="${not empty success}">
+						<div class="alert bg-green alert-dismissible" role="alert">
+							<button type="button" class="close" data-dismiss="alert"
+								aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+							${success}
+						</div>
+					</c:if>
+				</div>
+			
+				<ol class="breadcrumb">
+					<li><a href="/creathon">Home</a></li>
+					<li><a href="javascript:void(0);">Masters</a></li>
+					<li class="active">Add Location</li>
+				</ol>
+			</div><!-- 
+			<h2>
+				ADD LOCATION
+			</h2> -->
+		</div>
+		<!-- Basic Validation -->
+		<div class="row clearfix">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="card">
+					<div class="header">
+						<h2>ADD LOCATION DETAILS</h2>
+					</div>
+					<div class="body">
+						<form:form id="form_validation" action="saveLocation" method="POST" modelAttribute="location" enctype="multipart/form-data">
+					 <div class="col-md-12">
+								<div class="form-group form-float">
+									<div class="form-line">
+										<form:input type="text" class="form-control" path="name" name="location_name" required="true"/>
+										<label class="form-label">Location Name</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+							<div class="form-group form-float">
+                                    <div class="form-line">
+                                        <form:textarea path="description" name="description" cols="30" rows="3" class="form-control no-resize" required="true"></form:textarea>
+                                        <label class="form-label">Location Description</label>
+                                    </div>
+                                </div>
+							</div>
+							
+							 <div class="col-sm-12">
+							 <label class="form-label">Select Location Type</label>
+                                    <form:select path="type" class="form-control show-tick">
+                                        <option value="">-- Select location Type --</option>
+                                        <option value="Heritage">Heritage</option>
+                                        <option value="Lakes">Lakes</option>
+                                        <option value="Beaches">Beaches</option>
+                                        <option value="Religious">Religious</option>
+                                        <option value="Monuments"> Monuments </option>
+                                        <option value="Adventure"> Adventure </option>
+                                        <option value="Market"> Market</option>
+                                        <option value="Government Location"> Government Location</option>
+                                    </form:select>
+                                </div>
+                          
+                          
+							 <div class="col-sm-12">
+							 <label class="form-label">Permission From Other Dependent Agencies</label>
+                                    <select name="agencyList1" class="form-control show-tick" multiple >
+                                        <c:forEach  items="${agencyList}" var="al">
+                                        <option value="${al.id}">${al.name}</option>
+                                        </c:forEach>
+                                    </select>
+                                </div>
+					
+							<div class="col-md-12">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<form:input type="text" class="form-control" path="quote" name="quote" required="true"/>
+									<label class="form-label">Quote</label>
+								</div>
+							</div>
+							</div>
+							
+							
+							<div class="col-md-12">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<form:input type="text" class="form-control" path="address" name="address" required="true"/>
+									<label class="form-label">Address</label>
+								</div>
+							</div>
+							</div>
+							
+							<div class="col-md-12">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<form:input type="text" class="form-control" path="price" name="price" required="true"/>
+									<label class="form-label">Price</label>
+								</div>
+							</div>
+							</div>
+							
+							<div class="col-md-12">
+							<div class="form-group form-float">
+								<div class="form-line">
+									<form:input type="text" class="form-control" path="imgDescription" name="img_des" required="true"/>
+									<label class="form-label">Image Description</label>
+								</div>
+							</div>
+							</div>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+								<div class="col-md-12">
+							<div class="form-group form-float">
+							<label class="form-label">Location Image</label>
+								<div class="form-line">
+									<form:input type="file" class="form-control" path="locationPhoto" name="location_img" required="true"/>
+									
+								</div>
+								
+							</div>
+							</div>
+
+						  <div class="col-md-12">
+							<div class="form-group form-float">
+							<label class="form-label">Location Image According To Season</label>
+								<div  class="form-line">
+									
+										<form:input type="text" class="form-control" placeholder="Tag" path="locationPhotos[0].tag" name="img_des" required="true"/>
+                                       <form:select path="locationPhotos[0].weather" class="form-control show-tick">
+                                        <option value="">-- Location Image According To Season --</option>
+                                        <option value="Spring">Spring</option>
+                                        <option value="Summer">Summer</option>
+                                        <option value="Rainy">Rainy</option>
+                                        <option value="Autumn">Autumn</option>
+                                        <option value="Winter">Winter</option>
+                                    </form:select>							        	<form:input type="file" class="form-control" path="locationPhotos[0].file" name="location_multiple_img" required="true"/>
+								</div>
+								
+								
+							</div>
+							</div>
+						
+							<div  id="wheather" class="col-md-12">
+							</div>
+						<div class="col-md-12 ">
+							<button onclick="return addSeason()" class="btn btn-default form-group">Add Row</button>
+						</div>
+						<!-- 			
+							<div id="wheather">
+<div class="form-group">
+<input name="season0" id="season0" class="form-control firstsec" type="text">
+<input name="pic0" id="pic0"  type="file">
+<div class="secondsec">
+<button type="button" class="btn btn-sm btn-success exp-add" style="line-height:12px;" onclick="createNew(this);">+<i class="fa fa-plus" aria-hidden="true"></i></button>
+<button type="button" class="btn btn-sm btn-danger exp-minus" style="line-height:12px;display:none;" onclick="deleteNew(this)">-<i class="fa fa-minus" aria-hidden="true"></i></button>
+</div>                                                            
+ </div>
+ </div>
+			 -->			
+							<button class="btn btn-primary waves-effect" type="submit">SUBMIT</button>
+						</form:form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #END# Basic Validation -->
+
+	</div>
+	</div>
+</section>
+<%@include file="include/footer.jsp"%>

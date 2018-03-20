@@ -1,0 +1,11 @@
+package com.creathon.dao;
+
+import java.util.List;
+
+import com.creathon.bean.Status;
+
+public interface StatusDao {
+
+	public List<Status> listOfStatus();
+	public Status findById(Integer statusId);
+}
