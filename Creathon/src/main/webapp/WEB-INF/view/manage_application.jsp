@@ -1,4 +1,5 @@
 <%@include file="include/header_agency.jsp"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@include file="include/sidebar_agency.jsp"%>
 <script>
 function callDelete(){
@@ -77,8 +78,8 @@ function callDelete(){
 								<tbody>
 
 									<c:forEach items="${applicationList}" var="tml">
-										<tr id="tm${tml.id}">
-											<td><c:out value="${tml.location.name}" /></td>
+										<tr id="tm${tml.id}"><%-- ${tml.location.name} --%>
+											<td><c:out value="${fn:toUpperCase(tml.location.name)}"/></td>
 											<td><c:out value="${tml.productionHouse.name}" /></td>
 											<td><c:out value="${tml.film.name}" /></td>
 											<td><c:out value="${tml.dateOfShooting}" /></td>

@@ -361,7 +361,7 @@
 			</div>
 		</div>
 		<!-- #END# Basic Validation -->
-		
+		<c:if test="${not empty shootApplication.aerialPhotography.id}">
 		<!-- Basic Validation -->
 		<div class="row clearfix">
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -516,6 +516,7 @@
 				</div>
 			</div>
 		</div>
+		</c:if>
 		<!-- #END# Basic Validation -->
 		
 		<!-- Basic Validation -->

@@ -30,6 +30,16 @@ public class ManageApplicationDaoImpl implements ManageApplicationDao{
 		}
 	}
 
+	public List<ShootApplication> listOfShootApplication(Integer proId) {
+		List<ShootApplication> shootAppList = null;
+		try{
+			shootAppList = sessionFactory.getCurrentSession().createQuery("from ShootApplication where production_house_id=:proId").setInteger("proId", proId).list();
+			return shootAppList;
+		}catch(Exception e){
+			e.printStackTrace();
+			return null;
+		}
+	}
 	@Override
 	public ShootApplication findByApplicationId(Integer applicationId) {
 		// TODO Auto-generated method stub

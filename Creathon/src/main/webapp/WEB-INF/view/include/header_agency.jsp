@@ -229,7 +229,31 @@ function validate_fileupload(fileName)
 					href="<%=request.getContextPath()%>/agencyDashboard">SIH AGENCY</a>
 			</div>
 			<div class="collapse navbar-collapse" id="navbar-collapse">
+			
 				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav link-effect-4">
+								<li class="active first-list"><a href="index.html">Home</a></li>
+								<li><a href="#about" class="scroll">About</a></li>
+								<li><a href="#services" class="scroll">Services</a></li>
+								<li><a href="#gallery" class="scroll">Gallery</a></li>
+
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">More</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="#client" class="scroll">Testimonials</a></li>
+										<li><a href="#pricing" class="scroll">Shooting Location</a></li>
+										<li><a href="#team" class="scroll">Team</a></li>
+										<li><a href="#event" class="scroll">Events</a></li>
+										<li><a href="#book" class="scroll">Booking</a></li>
+									</ul>
+								</li>
+								<li><a href="login.html" >Login / Signup</a></li>
+
+
+
+
+
+
+							  </ul>
 					<!-- Call Search -->
 					<!-- <li><a href="javascript:void(0);" class="js-search"
 						data-close="true"><i class="material-icons">search</i></a></li> -->
@@ -400,9 +424,9 @@ function validate_fileupload(fileName)
 									All Tasks</a></li>
 						</ul></li> -->
 					<!-- #END# Tasks -->
-					<li class="pull-right"><a href="javascript:void(0);"
+					<!-- <li class="pull-right"><a href="javascript:void(0);"
 						class="js-right-sidebar" data-close="true"><i
-							class="material-icons">more_vert</i></a></li>
+							class="material-icons">more_vert</i></a></li> -->
 				</ul>
 			</div>
 		</div>

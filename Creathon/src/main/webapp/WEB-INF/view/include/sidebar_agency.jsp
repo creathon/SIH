@@ -1,5 +1,5 @@
 
-<section>
+<section style="display:none;">
 	<!-- Left Sidebar -->
 	<aside id="leftsidebar" class="sidebar">
 		<!-- User Info -->
@@ -39,7 +39,7 @@
 				<li class="active"><a href="<%=request.getContextPath()%>/agencyDashboard"> <i
 						class="material-icons">home</i> <span>Home</span>
 				</a></li>
-				<li><a href="javascript:void(0);" class="menu-toggle"> <i
+				<!-- <li><a href="javascript:void(0);" class="menu-toggle"> <i
 						class="material-icons">queue_play_next</i> <span>Masters</span>
 				</a>
 					<ul class="ml-menu">
@@ -63,7 +63,7 @@
 				</a></li>
 				<li><a href="rejectedApplications"> <i
 						class="material-icons">assignment_return</i> <span>Rejected Applications</span>
-				</a></li>
+				</a></li> -->
 					
 					<!-- <li><a href="javascript:void(0);" class="menu-toggle"> <i
 						class="material-icons">schedule</i> <span>Batch</span>
@@ -283,12 +283,12 @@
 		<!-- #Footer -->
 	</aside>
 	<!-- #END# Left Sidebar -->
-	<!-- Right Sidebar -->
+	<!-- <!-- Right Sidebar -->
 	<aside id="rightsidebar" class="right-sidebar">
 		<ul class="nav nav-tabs tab-nav-right" role="tablist">
 			<li role="presentation" class="active"><a href="#skins"
 				data-toggle="tab">SKINS</a></li>
-			<!-- <li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li> -->
+			<li role="presentation"><a href="#settings" data-toggle="tab">SETTINGS</a></li>
 		</ul>
 		<div class="tab-content">
 			<div role="tabpanel" class="tab-pane fade in active in active"
@@ -400,6 +400,6 @@
 				</div>
 			</div>
 		</div>
-	</aside>
+	</aside> -->
 	<!-- #END# Right Sidebar -->
 </section>

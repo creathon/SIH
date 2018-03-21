@@ -1,5 +1,5 @@
 
-<section>
+<section style="display:none;">
 	<!-- Left Sidebar -->
 	<aside id="leftsidebar" class="sidebar">
 		<!-- User Info -->

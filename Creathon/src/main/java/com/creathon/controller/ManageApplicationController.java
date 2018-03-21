@@ -64,6 +64,7 @@ public class ManageApplicationController {
 				mav.addObject("error","You have not viewed any applications!!");
 			}
 			mav.addObject("applicationList", applicationList);
+		
 		} else {
 			return new ModelAndView("redirect:/");
 		}

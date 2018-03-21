@@ -68,7 +68,7 @@ public class ShootApplication implements Serializable {
     private String dateOfRelease;
     
     @Column(name = "filming_in_any_forest_area")
-    private String filmingInAnyForestArea;
+    private Boolean filmingInAnyForestArea;
     
     @Column(name = "detail_of_forest_area")
     private String detailOfForestArea;
@@ -201,11 +201,11 @@ public class ShootApplication implements Serializable {
 		this.dateOfRelease = dateOfRelease;
 	}
 
-	public String getFilmingInAnyForestArea() {
+	public Boolean getFilmingInAnyForestArea() {
 		return filmingInAnyForestArea;
 	}
 
-	public void setFilmingInAnyForestArea(String filmingInAnyForestArea) {
+	public void setFilmingInAnyForestArea(Boolean filmingInAnyForestArea) {
 		this.filmingInAnyForestArea = filmingInAnyForestArea;
 	}
 

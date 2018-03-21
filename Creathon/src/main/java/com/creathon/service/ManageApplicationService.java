@@ -11,5 +11,5 @@ public interface ManageApplicationService {
 	public List<ShootApplication> listOfApprovedApplications();
 	public List<ShootApplication> listOfRejectedApplications();
 	public ShootApplication findByApplicationId(Integer applicationId);
-	
+	public List<ShootApplication> listOfShootApplication(Integer proId);
 }

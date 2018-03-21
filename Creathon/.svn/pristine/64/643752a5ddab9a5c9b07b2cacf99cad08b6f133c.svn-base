@@ -1,0 +1,60 @@
+package com.creathon.serviceImpl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.creathon.bean.ShootApplication;
+import com.creathon.dao.ManageApplicationDao;
+import com.creathon.service.ManageApplicationService;
+
+@Service
+@Transactional
+public class ManageApplicationServiceImpl implements ManageApplicationService{
+
+	@Autowired
+	ManageApplicationDao manageApplicationDao;
+	
+	@Override
+	public List<ShootApplication> listOfShootApplication() {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.listOfShootApplication();
+	}
+	
+
+	@Override
+	public ShootApplication findByApplicationId(Integer applicationId) {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.findByApplicationId(applicationId);
+	}
+
+	@Override
+	public List<ShootApplication> listOfShootApplicationByViewStatus(String viewStatus) {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.listOfShootApplicationByViewStatus(viewStatus);
+	}
+
+	@Override
+	public List<ShootApplication> listOfApprovedApplications() {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.listOfApprovedApplications();
+	}
+
+	@Override
+	public List<ShootApplication> listOfRejectedApplications() {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.listOfRejectedApplications();
+	}
+
+
+	@Override
+	public List<ShootApplication> listOfShootApplication(Integer proId) {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.listOfShootApplication(proId);
+	}
+
+	
+
+}

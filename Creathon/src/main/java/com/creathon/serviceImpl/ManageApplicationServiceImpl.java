@@ -22,6 +22,7 @@ public class ManageApplicationServiceImpl implements ManageApplicationService{
 		// TODO Auto-generated method stub
 		return manageApplicationDao.listOfShootApplication();
 	}
+	
 
 	@Override
 	public ShootApplication findByApplicationId(Integer applicationId) {
@@ -46,5 +47,14 @@ public class ManageApplicationServiceImpl implements ManageApplicationService{
 		// TODO Auto-generated method stub
 		return manageApplicationDao.listOfRejectedApplications();
 	}
+
+
+	@Override
+	public List<ShootApplication> listOfShootApplication(Integer proId) {
+		// TODO Auto-generated method stub
+		return manageApplicationDao.listOfShootApplication(proId);
+	}
+
+	
 
 }
