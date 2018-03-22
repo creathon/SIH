@@ -237,7 +237,7 @@ function validate_fileupload(fileName)
 								<li><a href="teamMemberList" class="scroll">Manage Crew Member</a></li>
 								<li><a href="addFilm" class="scroll">Add Films</a></li>
 								<li><a href="filmList" class="scroll">Manage Films</a></li>
-
+								<li><a href="shootLocation" class="scroll">Apply For Shoot</a></li>
 								<!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">More</span><span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="#client" class="scroll">Testimonials</a></li>

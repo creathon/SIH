@@ -1,6 +1,6 @@
 
-<%@include file="include/header.jsp"%>
-
+<%@include file="include/header_producer.jsp"%>
+<%@include file="include/sidebar_producer.jsp"%>
 <section class="content">
 	<div class="container-fluid">
 		<div class="block-header">
@@ -328,7 +328,7 @@
 				
 </section>
 
-<%@include file="include/sidebar.jsp"%>
+
 <%@include file="include/footer.jsp"%>
 
 <script>
