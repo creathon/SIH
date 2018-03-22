@@ -19,7 +19,10 @@ import com.creathon.bean.ProductionHouse;
 import com.creathon.bean.SessionBean;
 import com.creathon.bean.User;
 import com.creathon.service.AgencyService;
+import com.creathon.service.FilmsService;
+import com.creathon.service.LocationService;
 import com.creathon.service.ProductionHouseService;
+import com.creathon.service.ShootApplicationService;
 import com.creathon.service.UserService;
 import com.creathon.util.DesEncrypter;
 
@@ -35,6 +38,15 @@ public class LoginController {
 	
 	@Autowired
 	private ProductionHouseService productionHouseService;
+	
+	@Autowired
+	private LocationService locationService;  
+	
+	@Autowired
+	private FilmsService filmService; 
+	
+	@Autowired
+	private ShootApplicationService shootApplicationService; 
 	
 
 	 @RequestMapping(value="/", method = RequestMethod.GET)
@@ -63,6 +75,10 @@ public class LoginController {
 	    			sessionBean.setAgency(agency);
 	    			System.out.println("looged in as agency");
 	    			mav = new ModelAndView("agency_dashboard");
+	    			mav.addObject("productionHouseCount",productionHouseService.getProductionHouseCount());
+	    			mav.addObject("locationCount",locationService.getLocationCount());
+	    			mav.addObject("filmCount",filmService.getFilmCount());
+	    			mav.addObject("applicationCount",shootApplicationService.getshootApplicationCount());
 	    			
 	    		}else if(loginUser.getUserType() == 'p')
 	    		{

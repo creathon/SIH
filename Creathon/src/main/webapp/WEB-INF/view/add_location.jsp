@@ -1,6 +1,6 @@
 <%@page import="java.io.File"%>
-<%@include file="include/header.jsp"%>
-<%@include file="include/sidebar.jsp"%>
+<%@include file="include/header_agency.jsp"%>
+<%@include file="include/sidebar_agency.jsp"%>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 var count =1;

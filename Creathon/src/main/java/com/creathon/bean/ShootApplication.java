@@ -7,6 +7,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -90,7 +91,7 @@ public class ShootApplication implements Serializable {
     @JoinColumn(name = "aerial_photograph_id", referencedColumnName = "id",nullable =true)
     private Airport aerialPhotography;
     
-    @OneToMany(mappedBy ="shootApplication",cascade= CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy ="shootApplication",cascade= CascadeType.ALL)
     private List<LocationPermission> locationPermissions;
     
 

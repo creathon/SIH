@@ -14,8 +14,8 @@
 						<i class="material-icons">local_library</i>
 					</div>
 					<div class="content">
-						<div class="text">TOTAL COURSES</div>
-						<div class="number count-to" data-from="0" data-to="512"
+						<div class="text">REGISTERED PRODUCTION HOUSE</div>
+						<div class="number count-to" data-from="0" data-to="${productionHouseCount}"
 							data-speed="15" data-fresh-interval="20"></div>
 					</div>
 				</div>
@@ -26,8 +26,8 @@
 						<i class="material-icons">person </i>
 					</div>
 					<div class="content">
-						<div class="text">TOTAL STUDENTS</div>
-						<div class="number count-to" data-from="0" data-to="4687"
+						<div class="text">TOTAL LOCATION</div>
+						<div class="number count-to" data-from="0" data-to="${locationCount}"
 							data-speed="1000" data-fresh-interval="20"></div>
 					</div>
 				</div>
@@ -38,8 +38,8 @@
 						<i class="material-icons">school</i>
 					</div>
 					<div class="content">
-						<div class="text">TOTAL TRAINEES</div>
-						<div class="number count-to" data-from="0" data-to="79454"
+						<div class="text">TOTAL FILMS SHOOTED</div>
+						<div class="number count-to" data-from="0" data-to="${filmCount}"
 							data-speed="1000" data-fresh-interval="20"></div>
 					</div>
 				</div>
@@ -50,8 +50,8 @@
 						<i class="material-icons">person_add</i>
 					</div>
 					<div class="content">
-						<div class="text">NEW ASPIRANTS</div>
-						<div class="number count-to" data-from="0" data-to="1225"
+						<div class="text">TOTAL APPLICATION SUBMITTED</div>
+						<div class="number count-to" data-from="0" data-to="${applicationCount}"
 							data-speed="1000" data-fresh-interval="20"></div>
 					</div>
 				</div>

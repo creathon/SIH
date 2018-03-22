@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.creathon.bean.Cities;
 import com.creathon.bean.Countries;
+import com.creathon.bean.Designation;
 import com.creathon.bean.States;
 import com.creathon.dao.CommonDao;
 
@@ -60,6 +61,18 @@ public class CommonDaoImpl implements CommonDao{
 			return null;
 		}
 		return countryList;
+	}
+
+	@Override
+	public List<Designation> findAllDesignation() {
+		try
+		{
+			return (List<Designation>)sessionFactory.getCurrentSession().createQuery("from Designation").list();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

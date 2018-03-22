@@ -10,4 +10,5 @@ public interface LocationService {
 	public Location locationById(Integer locationId);
 	public Boolean saveandupdate(Location location);
 	public List<Location> findByAgencyId(Integer agencyId);
+	public Long getLocationCount();
 }

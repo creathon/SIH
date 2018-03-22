@@ -105,8 +105,9 @@
   margin-top: 17px;
   margin-left: 5px; }
 
+
 .navbar-nav .dropdown-menu {
-  margin-top: -40px !important; }
+  margin-top: 8px !important; }
 
 .label-count {
   position: absolute;
@@ -6745,9 +6746,15 @@ fieldset[disabled] .form-control {
     margin-top: 17px;
     margin-left: 5px;
     font-size: 125%; }
+rgdh
 
-.navbar-nav .dropdown-menu {
-  margin-top: -40px !important; }
+.navbar-nav > li > .dropdown-menu {
+    margin-top: 0;
+    margin-top: 20px!important;
+    /* margin-left: 42px !important; */
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 
 .label-count {
   position: absolute;

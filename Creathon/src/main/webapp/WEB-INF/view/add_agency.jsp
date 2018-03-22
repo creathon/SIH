@@ -50,7 +50,6 @@ function getCity(stateId) {
 			});
 }
 </script>
-</script>
 <section class="content">
 	<div class="container-fluid">
 		<div class="block-header">

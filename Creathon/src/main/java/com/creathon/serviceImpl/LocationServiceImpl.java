@@ -42,4 +42,10 @@ public class LocationServiceImpl implements LocationService{
 		}
 		return locationList;
 	}
+
+	@Override
+	public Long getLocationCount() {
+		// TODO Auto-generated method stub
+		return locationDao.getLocationCount();
+	}
 }

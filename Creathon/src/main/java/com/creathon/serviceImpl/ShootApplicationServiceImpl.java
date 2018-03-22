@@ -35,4 +35,10 @@ public class ShootApplicationServiceImpl implements ShootApplicationService {
 		return shootApplicationDao.update(shootApplicationId, statusId);
 	}
 
+	@Override
+	public Long getshootApplicationCount() {
+		// TODO Auto-generated method stub
+		return shootApplicationDao.getshootApplicationCount();
+	}
+
 }

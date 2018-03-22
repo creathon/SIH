@@ -9,4 +9,5 @@ public interface LocationDao {
 	public Location locationById(Integer locationId);
 	public List<Location> location();
 	public List<Location> findByAgencyId(Integer agencyId);
+	public Long getLocationCount();
 }

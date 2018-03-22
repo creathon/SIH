@@ -39,4 +39,10 @@ public class FilmsServiceImpl implements FilmsService{
 		return filmsDao.findByFilmId(filmId);
 	}
 
+	@Override
+	public Long getFilmCount() {
+		// TODO Auto-generated method stub
+		return filmsDao.getFilmCount();
+	}
+
 }

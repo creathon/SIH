@@ -22,6 +22,7 @@ import com.creathon.bean.Designation;
 import com.creathon.bean.ProductionHouse;
 import com.creathon.bean.SessionBean;
 import com.creathon.bean.TeamMember;
+import com.creathon.service.CommonService;
 import com.creathon.service.TeamMemberService;
 
 @Controller
@@ -29,10 +30,14 @@ public class TeamMemberController {
 
 	@Autowired
 	TeamMemberService teamMemberService;
+	
+	@Autowired 
+	private CommonService commonService;
 
 	@RequestMapping(value = "/addTeamMember", method = RequestMethod.GET)
 	public ModelAndView addTeamMember(ModelMap model, HttpServletRequest request) {
 		ModelAndView mav = new ModelAndView("add_team_member");
+		mav.addObject("designationList",commonService.findAllDesignation());
 		SessionBean sessionBean = (SessionBean) request.getSession().getAttribute("sessionBean");
 		if(sessionBean!=null){
 		mav.addObject("teamMember", new TeamMember());

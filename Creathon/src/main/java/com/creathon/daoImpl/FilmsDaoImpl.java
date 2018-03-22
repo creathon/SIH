@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -71,6 +72,13 @@ public class FilmsDaoImpl implements FilmsDao{
 			e.printStackTrace();
 			return null;
 		}
+	}
+
+	@Override
+	public Long getFilmCount() {
+		Query query = sessionFactory.getCurrentSession().createQuery( "select count(*) from Films");
+		Long count = (Long)query.uniqueResult();
+		return count;
 	}
 
 }

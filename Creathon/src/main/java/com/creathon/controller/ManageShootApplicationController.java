@@ -40,11 +40,11 @@ public class ManageShootApplicationController {
 	 
 	 
 	 
-	/* @RequestMapping(value="/view_complete_application", method = RequestMethod.GET)
+	 @RequestMapping(value="/view_complete_application", method = RequestMethod.GET)
 	    public ModelAndView viewApplicationDetails(@RequestParam("Id") Integer applicationId,ModelMap model, HttpServletRequest request){
-	    	ModelAndView mav = new ModelAndView("manage_shoot_application");
+	    	ModelAndView mav = new ModelAndView("view_complete_application");
 	    	SessionBean sessionBean = (SessionBean) request.getSession().getAttribute("sessionBean");
-	    	
+	    	System.out.println(applicationId);
 	    	Integer proId=sessionBean.getProductionHouse().getId();
 	    	List<ShootApplication> applicationList = manageApplicationService.listOfShootApplication(proId);
 	    	ShootApplication shootApplication = manageApplicationService.findByApplicationId(applicationId);
@@ -53,5 +53,5 @@ public class ManageShootApplicationController {
 	    	
 	    	return mav;
 	    	
-	    }*/
+	    }
 }

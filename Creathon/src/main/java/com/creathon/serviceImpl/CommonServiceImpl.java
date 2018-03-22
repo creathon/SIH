@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.creathon.bean.Cities;
 import com.creathon.bean.Countries;
+import com.creathon.bean.Designation;
 import com.creathon.bean.States;
 import com.creathon.dao.CommonDao;
 import com.creathon.service.CommonService;
@@ -33,6 +34,12 @@ public class CommonServiceImpl implements CommonService {
 	public List<Countries> getCountryList() {
 		// TODO Auto-generated method stub
 		return commonDao.getCountryList();
+	}
+
+	@Override
+	public List<Designation> findAllDesignation(){
+		// TODO Auto-generated method stub
+		return commonDao.findAllDesignation();
 	}
 
 }

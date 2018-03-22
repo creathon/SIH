@@ -2,6 +2,7 @@ package com.creathon.daoImpl;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -42,6 +43,13 @@ public class ProductionHouseDaoImpl implements ProductionHouseDao {
 			e.printStackTrace();
 			return false;
 		}
+	}
+
+	@Override
+	public Long getProductionHouseCount() {
+		Query query = sessionFactory.getCurrentSession().createQuery("select count(*) from ProductionHouse");
+		Long count = (Long)query.uniqueResult();
+		return count;
 	}
 	
 }

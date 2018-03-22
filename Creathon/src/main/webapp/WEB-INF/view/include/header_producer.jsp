@@ -233,11 +233,20 @@ function validate_fileupload(fileName)
 				<ul class="nav navbar-nav link-effect-4">
 								<li class="active first-list"><a href="index.html">Home</a></li>
 								<li><a href="<%=request.getContextPath()%>/producerDashboard" class="scroll">Dashboard</a></li>
-								<li><a href="addTeamMember" class="scroll">Add Crew Member</a></li>
-								<li><a href="teamMemberList" class="scroll">Manage Crew Member</a></li>
-								<li><a href="addFilm" class="scroll">Add Films</a></li>
-								<li><a href="filmList" class="scroll">Manage Films</a></li>
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Crew Member</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="addTeamMember" class="scroll">Add Crew Member</a></li>
+										<li><a href="teamMemberList" class="scroll">Manage Crew Member</a></li>
+									</ul>
+								</li>
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Film</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="addFilm" class="scroll">Add Films</a></li>
+										<li><a href="filmList" class="scroll">Manage Films</a></li>
+									</ul>
+								</li>								
 								<li><a href="shootLocation" class="scroll">Apply For Shoot</a></li>
+								<li><a href="manage_shoot_application" class="scroll">Manage Shoot Application</a></li>
 								<!-- <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">More</span><span class="caret"></span></a>
 									<ul class="dropdown-menu">
 										<li><a href="#client" class="scroll">Testimonials</a></li>

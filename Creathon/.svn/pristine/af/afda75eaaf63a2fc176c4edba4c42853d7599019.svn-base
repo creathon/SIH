@@ -1,0 +1,56 @@
+package com.creathon.daoImpl;
+
+import javax.transaction.Transactional;
+
+import org.hibernate.Query;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.creathon.bean.ProductionHouse;
+import com.creathon.dao.ProductionHouseDao;
+
+@Repository
+@Transactional
+public class ProductionHouseDaoImpl implements ProductionHouseDao {
+
+	
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	@Override
+	public ProductionHouse findByEmail(String email) {
+		ProductionHouse productionHouse= null;
+		try
+		{
+		productionHouse=(ProductionHouse) sessionFactory.getCurrentSession().createQuery("from ProductionHouse where emailId =:email").setString("email", email).uniqueResult();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
+		return productionHouse;
+		
+	}
+
+	@Override
+	public Boolean saveandupdate(ProductionHouse productionHouse) {
+		try
+		{
+			sessionFactory.getCurrentSession().saveOrUpdate(productionHouse);
+			return true;
+		}catch (Exception e) {	
+			e.printStackTrace();
+			return false;
+		}
+	}
+
+	@Override
+	public Long getProductionHouseCount() {
+		Query query = sessionFactory.getCurrentSession().createQuery("select count(*) from ProductionHouse");
+		Long count = (Long)query.uniqueResult();
+		return count;
+	}
+	
+}
+

@@ -27,6 +27,13 @@ public class ProductionHouseServiceImpl implements ProductionHouseService {
 		return productionHouseDao.saveandupdate(productionHouse);
 	}
 
+
+	@Override
+	public Long getProductionHouseCount() {
+		// TODO Auto-generated method stub
+		return productionHouseDao.getProductionHouseCount();
+	}
+
 	
 	
 }

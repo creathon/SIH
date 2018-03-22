@@ -198,12 +198,12 @@
 										<div class="demo-radio-button">
 											<input type="radio" class="with-gap radio-col-pink" id="r1"
 												name="a" value="1"
-												onclick="return showhide(this.value,'areial')"> <label
+												onclick="return showhide(this.value,'areial')" checked> <label
 												for="r1">Yes</label>
 									
 											<input type="radio"
 												class="with-gap radio-col-pink" id="r2" name="a" value="0"
-												onclick="return showhide(this.value,'areial')" checked>
+												onclick="return showhide(this.value,'areial')" >
 												<label for="r2">No</label>
 										</div>
 

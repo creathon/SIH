@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -65,6 +66,13 @@ public class LocationDaoImpl implements LocationDao {
 		}
 		
 		
+	}
+
+	@Override
+	public Long getLocationCount() {
+		Query query = sessionFactory.getCurrentSession().createQuery( "select count(*) from Location");
+		Long count = (Long)query.uniqueResult();
+		return count;
 	}
 	
 	
