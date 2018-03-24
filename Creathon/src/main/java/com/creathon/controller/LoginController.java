@@ -49,11 +49,18 @@ public class LoginController {
 	private ShootApplicationService shootApplicationService; 
 	
 
-	 @RequestMapping(value="/", method = RequestMethod.GET)
+	 @RequestMapping(value="/login", method = RequestMethod.GET)
 	    public ModelAndView showLoginPage(ModelMap model){
 	    	ModelAndView mav = new ModelAndView("index");
 	    	mav.addObject("user", new User());
 	    	System.out.println("landing page....");
+	        return mav;
+	    }
+	 
+	 @RequestMapping(value="/", method = RequestMethod.GET)
+	    public ModelAndView mainPage(ModelMap model){
+	    	ModelAndView mav = new ModelAndView("mainpage");
+	    
 	        return mav;
 	    }
 	 

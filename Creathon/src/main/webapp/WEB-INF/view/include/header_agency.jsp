@@ -232,18 +232,25 @@ function validate_fileupload(fileName)
 			
 				<ul class="nav navbar-nav navbar-right">
 				<ul class="nav navbar-nav link-effect-4">
-								<li class="active first-list"><a href="index.html">Home</a></li>
+								<li class="active first-list"><a href="agencyDashboard">Home</a></li>
 								<li><a href="#about" class="scroll">About</a></li>
 								<li><a href="#services" class="scroll">Services</a></li>
 								<li><a href="#gallery" class="scroll">Gallery</a></li>
 
 								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">More</span><span class="caret"></span></a>
 									<ul class="dropdown-menu">
-										<li><a href="#client" class="scroll">Testimonials</a></li>
-										<li><a href="#pricing" class="scroll">Shooting Location</a></li>
-										<li><a href="#team" class="scroll">Team</a></li>
-										<li><a href="#event" class="scroll">Events</a></li>
-										<li><a href="#book" class="scroll">Booking</a></li>
+								
+										<li><a href="addLocation" class="scroll">Add Location</a></li>
+										<li><a href="myLocation" class="scroll">My Locations</a></li>
+									
+									</ul>
+								</li>
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Applications</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="approvedApplications" class="scroll">Approved Application</a></li>
+										<li><a href="manageApplications" class="scroll">manageApplications</a></li>
+										<li><a href="viewedApplications" class="scroll">viewedApplications</a></li>
+										<li><a href="rejectedApplications" class="scroll">rejectedApplications</a></li>
 									</ul>
 								</li>
 								<li><a href="logout" >logout</a></li>
