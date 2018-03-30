@@ -551,7 +551,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- <span class="moto-color1_3"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp; December 28, 2017</span> -->
 						<div class="tabl-erat">
 							<div class="col-md-7 ratt">
-								<h6>&#x20b9; 49,999/-per day</h6>
+								<h6>&#x20b9; 4,999/-per day</h6>
 							</div>
 							<div class="col-md-5 tag">
 								<a href="#book" class="scroll">Apply Now</a>
@@ -575,7 +575,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- <span class="moto-color1_3"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp; December 28, 2017</span> -->
 						<div class="tabl-erat">
 							<div class="col-md-7 ratt">
-								<h6>&#x20b9; 79,999/-per day</h6>
+								<h6>&#x20b9; 4,999/-per day</h6>
 							</div>
 							<div class="col-md-5 tag">
 								<a href="#book" class="scroll">Apply Now</a>
@@ -601,7 +601,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<!-- <span class="moto-color1_3"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>&nbsp; December 28, 2017</span> -->
 						<div class="tabl-erat">
 							<div class="col-md-7 ratt">
-								<h6>&#x20b9; 99,999/-per day</h6>
+								<h6>&#x20b9; 4,999/-per day</h6>
 							</div>
 							<div class="col-md-5 tag">
 								<a href="#book" class="scroll">Apply Now</a>
