@@ -101,6 +101,14 @@ public class LoginController {
 	    			
 	    			mav = new ModelAndView("producer_dashboard");
 
+	    		}else if(loginUser.getUserType() == 'o')
+	    		{
+	    			ProductionHouse productionHouse = productionHouseService.findByEmail(user.getUsername());
+	    			sessionBean.setProductionHouse(productionHouse);
+	    			System.out.println("looged in as admin ");
+	    			
+	    			mav = new ModelAndView("admin_dashboard");
+
 	    		}
 	    		
 	    		request.getSession().setAttribute("sessionBean", sessionBean);

@@ -112,8 +112,9 @@ function getCity(stateId) {
 							</div>
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							 <ul class="nav navbar-nav link-effect-4">
-								<li class="first-list"><a href="index.html">Home</a></li>
-								<li class="active "><a href="login.html" >Get In</a></li>
+								<li class="first-list"><a href="<%=request.getContextPath()%>/">Home</a></li>
+								<li class="active "><a href="login.html" >Login / Signup</a></li>
+								<li class="active "><a href="adminDashboard" >adminDashboard</a></li>
 							  </ul>
 							</div>
 						</div>

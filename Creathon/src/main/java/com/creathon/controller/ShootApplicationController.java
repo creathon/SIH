@@ -6,7 +6,10 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -141,6 +144,17 @@ public class ShootApplicationController {
 			 
 			 shootApplication.setStatus(status);
 			 shootApplication.setViewStatus("0");
+			 
+			 SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");  
+			    Date date = new Date();  
+			    System.out.println(formatter.format(date)); 
+			    
+			 try {
+				shootApplication.setDateOfSubmission(formatter.parse(formatter.format(date)));
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			 //save shoot application
 			Boolean b=shootApplicationService.save(shootApplication);
 			

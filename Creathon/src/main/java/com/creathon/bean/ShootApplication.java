@@ -2,6 +2,7 @@
 package com.creathon.bean;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -51,6 +52,9 @@ public class ShootApplication implements Serializable {
     
     @Column(name = "time_of_shooting")
     private String timeOfShooting;
+    
+    @Column(name="date_of_submission")
+    private Date dateOfSubmission;
    
     @OneToOne(targetEntity = Script.class,cascade = CascadeType.ALL)
     @JoinColumn(name = "script_id", referencedColumnName = "id")
@@ -258,18 +262,28 @@ public class ShootApplication implements Serializable {
 		this.aerialPhotography = aerialPhotography;
 	}
 
+	public Date getDateOfSubmission() {
+		return dateOfSubmission;
+	}
+
+	public void setDateOfSubmission(Date dateOfSubmission) {
+		this.dateOfSubmission = dateOfSubmission;
+	}
+
 	@Override
 	public String toString() {
-		return "ShootApplication [id=" + id + ", productionHouseId=" + productionHouse + ", film=" + film
-				+ ", location=" + location + ", noPeopleInCast=" + noPeopleInCast + ", dateOfShooting=" + dateOfShooting
-				+ ", timeOfShooting=" + timeOfShooting + ", scriptId=" + script + ", placeOfStay=" + placeOfStay
-				+ ", periodOfStay=" + periodOfStay + ", equipmentToBeUsed=" + equipmentToBeUsed + ", dateOfRelease="
-				+ dateOfRelease + ", filmingInAnyForestArea=" + filmingInAnyForestArea + ", detailOfForestArea="
-				+ detailOfForestArea + ", filmingInAnyDefenseArea=" + filmingInAnyDefenseArea + ", detailOfDefenseArea="
-				+ detailOfDefenseArea + ", status=" + status + ", viewStatus=" + viewStatus + ", aerialPhotography="
-				+ aerialPhotography + "]";
+		return "ShootApplication [id=" + id + ", productionHouse=" + productionHouse + ", film=" + film + ", location="
+				+ location + ", noPeopleInCast=" + noPeopleInCast + ", dateOfShooting=" + dateOfShooting
+				+ ", timeOfShooting=" + timeOfShooting + ", dateOfSubmission=" + dateOfSubmission + ", script=" + script
+				+ ", placeOfStay=" + placeOfStay + ", periodOfStay=" + periodOfStay + ", equipmentToBeUsed="
+				+ equipmentToBeUsed + ", dateOfRelease=" + dateOfRelease + ", filmingInAnyForestArea="
+				+ filmingInAnyForestArea + ", detailOfForestArea=" + detailOfForestArea + ", filmingInAnyDefenseArea="
+				+ filmingInAnyDefenseArea + ", detailOfDefenseArea=" + detailOfDefenseArea + ", status=" + status
+				+ ", viewStatus=" + viewStatus + ", aerialPhotography=" + aerialPhotography + ", locationPermissions="
+				+ locationPermissions + "]";
 	}
-    
+
+	
     
     
    
