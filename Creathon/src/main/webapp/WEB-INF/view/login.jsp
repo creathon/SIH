@@ -105,7 +105,7 @@ function getCity(stateId) {
 								<span class="icon-bar"></span>
 							  </button>
 								 <div class="navbar-brand logo ">
-									<h1><a href="index.html">Praadis</a></h1>
+									<h1><a href="<%=request.getContextPath()%>/">Creathon</a></h1>
 								</div>
 							</div>
 							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -125,10 +125,10 @@ function getCity(stateId) {
                   <h1 class="welcome text-center">Log In</h1>
                   <hr>
                   <div class="form-group col-md-12">
-                   <form:input type="email"  path="username" class="form-control"  placeholder="Enter email"/>
+                   <form:input type="email"  path="username" class="form-control"  placeholder="Email"/>
                   </div>
                   <div class="form-group col-md-12">
-                   <form:input type="password" class="form-control"   path="password" />
+                   <form:input type="password" class="form-control"   placeholder="Password" path="password" />
                   </div>
                   <div class="form-check col-md-12">
                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -269,17 +269,17 @@ function getCity(stateId) {
 	 	<div class="col-md-4 w3layouts_footer_grid" data-aos="fade-right">
 	 				<h2>Contact Information</h2>
 	 						<ul class="con_inner_text">
-	 						<li><span class="fa fa-map-marker" aria-hidden="true"></span>Praadis Consulting, Inc. <label>475, Wall street, Princeton, <br>
+	 						<li><span class="fa fa-map-marker" aria-hidden="true"></span>IstudentLabs<label>address address <br>
 	 NJ, 08540</label></li>
-	 						<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="mailto:info@example.com">info@praadiscg.com</a></li>
-	 						<li><span class="fa fa-phone" aria-hidden="true"></span>Phone: +1-732-447-6000</li>
+	 						<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="mailto:info@example.com">istudentlabs.com</a></li>
+	 						<li><span class="fa fa-phone" aria-hidden="true"></span>Phone: +1-9999999999</li>
 	 					</ul>
 
 	 				<ul class="social_agileinfo">
-	 					<li><a href="https://www.facebook.com/praadiscg" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
-	 					<li><a href="https://twitter.com/PraadisCG" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
-	 					<li><a href="https://www.linkedin.com/company/mpshopping" class="w3_instagram"><i class="fa fa-linkedin"></i></a></li>
-	 					<li><a href="https://plus.google.com/+PRAADISCONSULTINGINC" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
+	 					<li><a href="https://www.facebook.com/" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+	 					<li><a href="https://twitter.com/" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+	 					<li><a href="https://www.linkedin.com/" class="w3_instagram"><i class="fa fa-linkedin"></i></a></li>
+	 					<li><a href="https://plus.google.com/" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
 	 				</ul>
 	 			</div>
 	 			<div class="col-md-4 w3layouts_footer_grid" data-aos="fade-down">
@@ -308,7 +308,7 @@ function getCity(stateId) {
 	 			<div class="clearfix"> </div>
 	 		</div>
 	 		</div>
-	 		<p class="copyright" data-aos="zoom-in">© 2018 | Creathon | All Rights Reserved | Design by <a href="http://www.praadiscg.com/" target="_blank">Praadis Consulting Inc.</a></p>
+	 		<p class="copyright" data-aos="zoom-in">© 2018 | Creathon | All Rights Reserved | Design by <a href="http://www.istudentlabs.com/" target="_blank">Istudent Labs.</a></p>
 	 </div>
 	 <!-- //footer -->
 

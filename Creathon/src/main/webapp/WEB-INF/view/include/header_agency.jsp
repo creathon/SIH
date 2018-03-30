@@ -253,7 +253,7 @@ function validate_fileupload(fileName)
 										<li><a href="rejectedApplications" class="scroll">rejectedApplications</a></li>
 									</ul>
 								</li>
-								<li><a href="logout" >logout</a></li>
+								<li><a href="logout" >Logout</a></li>
 
 
 

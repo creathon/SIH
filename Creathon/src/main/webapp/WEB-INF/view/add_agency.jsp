@@ -1,9 +1,37 @@
-<%@include file="include/header.jsp"%>
-<%@include file="include/sidebar.jsp"%>
+<%-- <%@include file="include/header.jsp"%>
+<%@include file="include/sidebar.jsp"%> --%>
 
 
 <!-- testing
  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Dazzling Delhi | Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="New Party Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="stylesheet" href="assets/css/front/bootstrap.css"  type="text/css" media="all" />
+<link rel="stylesheet" href="assets/css/front/style.css" type="text/css" media="all" />
+<link href="assets/css/front/jQuery.lightninBox.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="assets/css/front/flexslider.css" type="text/css" media="screen" property="" />
+<link href="assets/css/front/aos.css" rel="stylesheet" type="text/css" media="all" /><!-- //animation effects-css-->
+<link href="assets/css/front/font-awesome.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Oswald:400,500,600,700" rel="stylesheet">
+<script src="assets/js/front/jquery-2.2.3.min.js"></script>
+<script src="assets/js/front/bootstrap.js"></script>
+
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+</head>
+
 
 <script>
 
@@ -69,11 +97,11 @@ function getCity(stateId) {
 								}
 							</script>
 					</c:if>
-				<ol class="breadcrumb">
+				<!-- <ol class="breadcrumb">
 					<li><a href="/creathon">Home</a></li>
 					<li><a href="javascript:void(0);">Masters</a></li>
 					<li class="active">Add Agency</li>
-				</ol>
+				</ol> -->
 			</div>
 			<!-- <h2>ADD AGENCY</h2> -->
 		</div>
@@ -85,9 +113,11 @@ function getCity(stateId) {
 						<h2>ADD AGENCY DETAILS</h2>
 					</div>
 					<div class="body">
-						<form:form id="form_validation" method="POST" action="saveAgency" modelAttribute="agency" enctype="multipart/form-data">
+						<form:form class="creathon_login"  id="form_validation" method="POST" action="saveAgency" modelAttribute="agency" enctype="multipart/form-data">
 						
-							<div class="col-md-6">
+						 <h1 class="welcome text-center">Log In</h1>
+                  <hr>
+							<div class="form-group col-md-12">
 								<div class="form-group form-float">
 									<div class="form-line">
 										<form:input type="text" class="form-control" path="name" name="agency_name" required="true"/> <label class="form-label">Agency
@@ -219,4 +249,70 @@ function getCity(stateId) {
 
 	</div>
 </section>
-<%@include file="include/footer.jsp"%>
+ <script src="assets/js/front/jQuery.lightninBox.js"></script>
+	 <script type="text/javascript">
+	 $(".lightninBox").lightninBox();
+	 </script>
+	 <!-- /js for portfolio lightbox -->
+	 <!-- flexSlider -->
+	 			<script defer src="assets/js/front/jquery.flexslider.js"></script>
+	 			<script type="text/javascript">
+	 				$(window).load(function(){
+	 					$('.flexslider').flexslider({
+	 					animation: "slide",
+	 					start: function(slider){
+	 						$('body').removeClass('loading');
+	 					}
+	 					});
+	 				});
+	 			</script>
+	 <!-- //flexSlider -->
+
+	 <script type="text/javascript" src="assets/js/front/move-top.js"></script>
+	 <script type="text/javascript" src="assets/js/front/easing.js"></script>
+
+	 <script src="assets/js/front/jarallax.js"></script>
+	 <script src="assets/js/front/SmoothScroll.min.js"></script>
+	 <script type="text/javascript">
+	 	/* init Jarallax */
+	 	$('.jarallax').jarallax({
+	 		speed: 0.5,
+	 		imgWidth: 1366,
+	 		imgHeight: 768
+	 	})
+	 </script><!-- here stars scrolling icon -->
+	 <script type="text/javascript">
+	 	$(document).ready(function() {
+	 		/*
+	 			var defaults = {
+	 			containerID: 'toTop', // fading element id
+	 			containerHoverID: 'toTopHover', // fading element hover id
+	 			scrollSpeed: 1200,
+	 			easingType: 'linear'
+	 			};
+	 		*/
+
+	 		$().UItoTop({ easingType: 'easeOutQuart' });
+
+	 		});
+	 </script>
+	 <!-- //here ends scrolling icon -->
+	 <!-- scrolling script -->
+	 <script type="text/javascript">
+	 jQuery(document).ready(function($) {
+	 	$(".scroll").click(function(event){
+	 		event.preventDefault();
+	 		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	 	});
+	 });
+	 </script>
+	 <!-- //scrolling script -->
+	 <!-- animation effects-js files-->
+	 <script src="assets/js/front/aos.js"></script><!-- //animation effects-js-->
+	 <script src="assets/js/front/aos1.js"></script><!-- //animation effects-js-->
+	 <!-- animation effects-js files-->
+
+	 </body>
+	 </html>
+
+<%-- <%@include file="include/footer.jsp"%> --%>
