@@ -46,7 +46,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span class="icon-bar"></span>
 							  </button>
 								 <div class="navbar-brand logo ">
-									<h1><a href="index.html">Praadis</a></h1>
+									<h1><a href="index.html">Creathon</a></h1>
 									<!-- <a href="index.php"><img src="assets/frontimages/creathon.png" alt=""> </a> -->
 								</div>
 
@@ -960,9 +960,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <!-- //event schedule -->
 		<!-- map -->
-			<div class="frame">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6604653138397!2d77.45374021505603!3d23.182589184872327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43e8e479cd57%3A0x545ace232415d5c9!2sPraadis+Consulting+Inc%2C+India!5e0!3m2!1sen!2sin!4v1521032210199" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
+			<!-- <div class="frame">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.6604653138397!2d77.45374021505603!3d23.182589184872327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c43e8e479cd57%3A0x545ace232415d5c9!2sIndia!5e0!3m2!1sen!2sin!4v1521032210199" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div> -->
 		<!-- //map -->
 
 
@@ -973,17 +973,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="col-md-4 w3layouts_footer_grid" data-aos="fade-right">
 							<h2>Contact Information</h2>
 							    <ul class="con_inner_text">
-									<li><span class="fa fa-map-marker" aria-hidden="true"></span>Praadis Consulting, Inc. <label>475, Wall street, Princeton, <br>
+									<li><span class="fa fa-map-marker" aria-hidden="true"></span>Address OF the Main Address <label>address "address" <br>
 		NJ, 08540</label></li>
-									<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="mailto:info@example.com">info@praadiscg.com</a></li>
-									<li><span class="fa fa-phone" aria-hidden="true"></span>Phone: +1-732-447-6000</li>
+									<li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="mailto:info@example.com">info@creathon.com</a></li>
+									<li><span class="fa fa-phone" aria-hidden="true"></span>Phone: +91-9090909090</li>
 								</ul>
 
 							<ul class="social_agileinfo">
-								<li><a href="https://www.facebook.com/praadiscg" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com/PraadisCG" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/mpshopping" class="w3_instagram"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="https://plus.google.com/+PRAADISCONSULTINGINC" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="https://www.facebook.com/" class="w3_facebook"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com/" class="w3_twitter"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://www.linkedin.com/" class="w3_instagram"><i class="fa fa-linkedin"></i></a></li>
+								<li><a href="https://plus.google.com/" class="w3_google"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 						<div class="col-md-4 w3layouts_footer_grid" data-aos="fade-down">
@@ -1012,7 +1012,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="clearfix"> </div>
 					</div>
 					</div>
-					<p class="copyright" data-aos="zoom-in">Copyright © 2018 | Creathon | All Rights Reserved | Design by <a href="http://www.praadiscg.com/" target="_blank">Praadis Consulting Inc.</a></p>
+					<p class="copyright" data-aos="zoom-in">Copyright © 2018 | Creathon | All Rights Reserved | Design by <a href="http://www.istudentlabs.com/" target="_blank">IKstudent Labs</a></p>
 			</div>
 			<!-- //footer -->
 
