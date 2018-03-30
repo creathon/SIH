@@ -4,6 +4,8 @@
 <title>Dazzling Delhi | Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
+<!-- Favicon-->
+<link rel="icon" href="assets/frontimages/creathonLogo.jpg" type="image/x-icon">
 <meta name="keywords"
 	content="New Party Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -231,7 +233,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<p>The dazzling agencies from delhi provides best user experience.</p>
 
 					<div class="w3layouts_more">
-						<a href="#book" class="scroll">Book Now</a>
+						<a href="#book" class="scroll">Apply Now</a>
 					</div>
 				</div>
 				<div class="col-md-4 agileits_services_grid" data-aos="fade-up">
@@ -244,7 +246,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<p>Conducting events with creathon is the best and the versatile way to showcase your talent.</p>
 
 					<div class="w3layouts_more">
-						<a href="#book" class="scroll">Book Now</a>
+						<a href="#book" class="scroll">Apply Now</a>
 					</div>
 				</div>
 				<div class="col-md-4 agileits_services_grid" data-aos="fade-left">
@@ -257,7 +259,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<p class="text-justify">The API's gives all the production house crew members a great journey experience.</p>
 
 					<div class="w3layouts_more">
-						<a href="#book" class="scroll">Book Now</a>
+						<a href="#book" class="scroll">Apply Now</a>
 					</div>
 				</div>
 				<div class="clearfix"></div>
@@ -320,7 +322,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="col-md-4 ser-1" data-aos="fade-left">
 				<div class="grid1">
 
-					<h4>ROAM AROUND THE DAZZLING CITY IN OLA</h4>
+					<h4>ROAM AROUND THE DAZZLING CITY IN RADIO TAXI</h4>
 					<p class="text-justify">Exploring the city with easy booking of
 						cabs would develop interest within producers and their crew
 						members.</p>
@@ -552,7 +554,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h6>&#x20b9; 49,999/-per day</h6>
 							</div>
 							<div class="col-md-5 tag">
-								<a href="#book" class="scroll">Book Now</a>
+								<a href="#book" class="scroll">Apply Now</a>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -576,7 +578,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h6>&#x20b9; 79,999/-per day</h6>
 							</div>
 							<div class="col-md-5 tag">
-								<a href="#book" class="scroll">Book Now</a>
+								<a href="#book" class="scroll">Apply Now</a>
 							</div>
 							<div class="clearfix"></div>
 						</div>
@@ -602,7 +604,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<h6>&#x20b9; 99,999/-per day</h6>
 							</div>
 							<div class="col-md-5 tag">
-								<a href="#book" class="scroll">Book Now</a>
+								<a href="#book" class="scroll">Apply Now</a>
 							</div>
 							<div class="clearfix"></div>
 						</div>

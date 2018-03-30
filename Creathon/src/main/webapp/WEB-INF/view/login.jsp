@@ -3,6 +3,8 @@
 <head>
 <title>Dazzling Delhi | Home</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Favicon-->
+<link rel="icon" href="assets/frontimages/creathonLogo.jpg" type="image/x-icon">
 <meta charset="utf-8">
 <meta name="keywords" content="New Party Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />

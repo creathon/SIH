@@ -8,7 +8,7 @@
 	name="viewport">
 <title>SIH Producer</title>
 <!-- Favicon-->
-<link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/frontimages/creathonLogo.jpg" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link
