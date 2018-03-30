@@ -111,9 +111,10 @@
 <script src="assets/js/pages/ui/dialogs.js"></script>
 <script src="assets/plugins/sweetalert/sweetalert.min.js"></script>
 </body>
-
+<c:if test="${not empty login}">
 <script>
 callSuccessAlert("Success","Welcome");
 </script>
+</c:if>
 
 </html>

@@ -92,6 +92,7 @@ public class LoginController {
 	    			mav.addObject("locationCount",locationService.getLocationCount());
 	    			mav.addObject("filmCount",filmService.getFilmCount());
 	    			mav.addObject("applicationCount",shootApplicationService.getshootApplicationCount());
+	    			mav.addObject("login","");
 	    			
 	    		}else if(loginUser.getUserType() == 'p')
 	    		{
