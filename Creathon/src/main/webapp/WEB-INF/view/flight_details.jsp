@@ -10,7 +10,7 @@
 	<div class="container-fluid">
 								<div class="form-group">
 					<div class="body">
-							<div class="row clearfix">
+							<div class="row clearfix col-md-12">
 								<div class="col-md-4">
 									<b>SOURCE</b>
 									<div class="form-group">
@@ -28,12 +28,20 @@
 										</div>
 									</div>
 								</div>
+								<div class="col-md-4">
+									<b>DESTINATION</b>
+									<div class="form-group">
+										<div class="form-line">
+												<input  type="date" placeholder="DESTINATION" class="form-control"  />
+										</div>
+									</div>
+								</div>
 								
 								<div class="col-md-4">
 									<div class="form-group">
-										<div class="form-line">
-										  <button class="form-control" id="hit" type="button" name="">Search</button>
-										</div>
+										
+										  <button class="btn btn--success" id="hit" type="button" name="">Search</button>
+										
 									</div>
 								</div>
 								</div>
@@ -107,7 +115,7 @@
 $.ajax({
     type: "POST", //rest Type
     dataType: 'jsonp', //mispelled
-    url: "https://developer.goibibo.com/api/search/?app_id=390fbd4c&app_key=9299e9cced9bd7c7d22ee2e0fdedc120&format=json&source="+source+"&destination="+destination+"&dateofdeparture=20180325&seatingclass=E&adults=1&children=0&infants=0&counter=100",
+    url: "https://developer.goibibo.com/api/search/?app_id=390fbd4c&app_key=9299e9cced9bd7c7d22ee2e0fdedc120&format=json&source="+source+"&destination="+destination+"&dateofdeparture=20180401&seatingclass=E&adults=1&children=0&infants=0&counter=100",
     async: false,
     contentType: "application/json; charset=utf-8",
     success: function (msg) {
