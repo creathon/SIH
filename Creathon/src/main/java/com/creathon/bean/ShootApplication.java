@@ -270,7 +270,7 @@ public class ShootApplication implements Serializable {
 		this.dateOfSubmission = dateOfSubmission;
 	}
 
-	@Override
+	/*@Override
 	public String toString() {
 		return "ShootApplication [id=" + id + ", productionHouse=" + productionHouse + ", film=" + film + ", location="
 				+ location + ", noPeopleInCast=" + noPeopleInCast + ", dateOfShooting=" + dateOfShooting
@@ -281,13 +281,9 @@ public class ShootApplication implements Serializable {
 				+ filmingInAnyDefenseArea + ", detailOfDefenseArea=" + detailOfDefenseArea + ", status=" + status
 				+ ", viewStatus=" + viewStatus + ", aerialPhotography=" + aerialPhotography + ", locationPermissions="
 				+ locationPermissions + "]";
-	}
+	}*/
 
 	
-    
-    
-   
-
   
     
 }

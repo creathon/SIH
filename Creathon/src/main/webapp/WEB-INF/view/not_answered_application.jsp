@@ -56,39 +56,42 @@ function callDelete(){
 								class="table table-bordered table-striped table-hover dataTable js-exportable">
 								<thead>
 									<tr>
-										<th>Location </th>
+										<th>Agency Name </th>
 										<th>Producer</th>
 										<th>Film</th>
 										<th>Date of Shooting</th>
 										<th>No of Crew Members</th>
+										<th>Submitted On</th>
 										<th></th>
 									</tr>
 								</thead>
 								<tfoot>
 									<tr>
-										<th>Location </th>
+										<th>Agency Name </th>
 										<th>Producer</th>
 										<th>Film</th>
 										<th>Date of Shooting</th>
 										<th>No of Crew Members</th>
+										<th>Submitted On</th>
 										<th></th>
 									</tr>
 								</tfoot>
 								<tbody>
 
-									<c:forEach items="${applicationList}" var="tml">
-										<tr id="tm${tml.id}">
-											<td><c:out value="${tml.location.name}" /></td>
-											<td><c:out value="${tml.productionHouse.name}" /></td>
-											<td><c:out value="${tml.film.name}" /></td>
-											<td><c:out value="${tml.dateOfShooting}" /></td>
-											<td><c:out value="${tml.noPeopleInCast}" /></td>
-											<td><a href="viewApplicationDetails?Id=${tml.id}">
+									<c:forEach items="${notAnsweredApplicationList}" var="naal">
+										<tr >
+											<td><c:out value="${naal.location.agencyId.name}" /></td>
+											<td><c:out value="${naal.productionHouse.name}" /></td>
+											<td><c:out value="${naal.film.name}" /></td>
+											<td><c:out value="${naal.dateOfShooting}" /></td>
+											<td><c:out value="${naal.noPeopleInCast}" /></td>
+											<td><c:out value="${naal.dateOfSubmission}" /></td>
+											<td><a href="viewApplicationDetails?Id=${naal.id}">
 													<button type="button" class="btn btn-primary waves-effect">VIEW DETAILS</button>
 											</a></td>
 										</tr>
 									</c:forEach>
-
+									
 								</tbody>
 							</table>
 						</div>

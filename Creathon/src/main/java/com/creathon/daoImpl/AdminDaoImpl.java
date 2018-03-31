@@ -19,11 +19,11 @@ public class AdminDaoImpl implements AdminDao{
 	SessionFactory sessionFactory;
 	
 	@Override
-	public List<ShootApplication> notViewedApplicationList() {
+	public List<Integer> notViewedApplicationList() {
 
-		List<ShootApplication> notViewedApplicationList = null;
+		List<Integer> notViewedApplicationList = null;
 		try {
-			notViewedApplicationList = sessionFactory.getCurrentSession().createSQLQuery("SELECT * FROM `shoot_application` where date_of_submission<=DATE_SUB(NOW(),INTERVAL 2 DAY) and status ="+'1').list();
+			notViewedApplicationList = sessionFactory.getCurrentSession().createSQLQuery("SELECT id FROM `shoot_application` where date_of_submission <= DATE_SUB( NOW(),INTERVAL 2 DAY ) and status!="+'6'+" and status!="+'7').list();
 			System.out.println(notViewedApplicationList);
 			return notViewedApplicationList;
 		}catch(Exception e) {

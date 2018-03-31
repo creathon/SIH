@@ -244,6 +244,12 @@ function validate_fileupload(fileName)
 										<li><a href="addFilm" class="scroll">Add Films</a></li>
 										<li><a href="filmList" class="scroll">Manage Films</a></li>
 									</ul>
+								</li>
+								<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-letters="Pages">Complaint</span><span class="caret"></span></a>
+									<ul class="dropdown-menu">
+										<li><a href="complaint" class="scroll">Add Complaint</a></li>
+										<li><a href="#" class="scroll">View Complaint</a></li>
+									</ul>
 								</li>								
 								<li><a href="shootLocation" class="scroll">Apply For Shoot</a></li>
 								<li><a href="manage_shoot_application" class="scroll">Manage Shoot Application</a></li>
@@ -256,6 +262,7 @@ function validate_fileupload(fileName)
 										<li><a href="#book" class="scroll">Booking</a></li>
 									</ul>
 								</li> -->
+								
 								<li><a href="logout" >Logout</a></li>
 
 

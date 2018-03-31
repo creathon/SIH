@@ -615,7 +615,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!-- <a href="" class="scroll">More Locations</a> -->
 			
 			<div class="more-button">
-				<a href="moreLocations" >More Locations</a>
+				<a href="moreLocations" style="margin-left:40%;">More Locations</a>
 			</div>
 					</div>
 	</div>

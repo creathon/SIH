@@ -81,9 +81,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<ul class="nav navbar-nav link-effect-4">
 								<li class="active first-list"><a
 									href="<%=request.getContextPath()%>/">Home</a></li>
-								<li><a href="#about" class="scroll">About</a></li>
-								<li><a href="#services" class="scroll">Services</a></li>
-								<li><a href="#gallery" class="scroll">Gallery</a></li>
+								<li><a href="<%=request.getContextPath()%>/">About</a></li>
+								<li><a href="#services">Services</a></li>
+								<li><a href="#gallery">Gallery</a></li>
 
 								<li><a href="#" class="dropdown-toggle"
 									data-toggle="dropdown" role="button" aria-haspopup="true"
